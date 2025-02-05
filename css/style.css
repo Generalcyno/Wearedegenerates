@@ -1,0 +1,91 @@
+/* General Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6A0DAD; /* Purple Background */
+    color: white;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(75, 0, 130, 0.95); /* Darker Purple */
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #4B0082;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #5A189A; /* Lighter Purple */
+    transform: scale(1.05);
+}
+
+/* Main Content */
+.content {
+    padding: 100px 20px 40px; /* Space for fixed nav */
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 10px;
+    color: #E0C3FC; /* Softer Purple for subtitle */
+}
+
+p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #D8BFD8; /* Softer Purple for text */
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #D8BFD8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .btn {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
