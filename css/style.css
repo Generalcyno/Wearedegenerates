@@ -10,76 +10,82 @@ body {
 
 /* Navigation Bar */
 nav {
-    background: rgba(75, 0, 130, 0.9); /* Dark Purple */
-    padding: 10px 0;
+    background: rgba(75, 0, 130, 0.95); /* Darker Purple */
+    padding: 15px 0;
     position: fixed;
     top: 0;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
 }
 
-/* Button Container */
 .nav-buttons {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
 }
 
-/* Navigation Buttons */
 .btn {
     color: white;
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
-    padding: 8px 15px;
-    background-color: #4B0082; /* Dark Purple */
+    padding: 10px 20px;
+    background-color: #4B0082;
     border-radius: 5px;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover Effect for Buttons */
 .btn:hover {
     background-color: #5A189A; /* Lighter Purple */
     transform: scale(1.05);
 }
 
 /* Main Content */
-.container {
-    padding-top: 80px; /* Space for fixed nav */
+.content {
+    padding: 100px 20px 40px; /* Space for fixed nav */
 }
 
-/* Floating Discord Button */
-.discord-float {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background-color: #5865F2;
-    color: white;
-    padding: 10px 15px;
+h1 {
+    font-size: 36px;
     font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover Effect for Discord Button */
-.discord-float:hover {
-    background-color: #4854C3;
-    transform: scale(1.1);
+h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 10px;
+    color: #E0C3FC; /* Softer Purple for subtitle */
 }
 
-/* 🔹 Responsive Design (Fix Mobile Layout) */
+p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #D8BFD8; /* Softer Purple for text */
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #D8BFD8;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    nav {
-        padding: 8px 0;
-    }
-    .nav-buttons {
-        gap: 5px;
-    }
     .btn {
-        font-size: 12px; /* Smaller text */
-        padding: 6px 12px; /* Smaller buttons */
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
     }
 }
