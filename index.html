@@ -7,17 +7,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">WAD</div>
-            <div class="nav-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="rules.html">Rules</a>
-            </div>
-            <button class="menu-toggle">&#9776;</button>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <div class="logo">WAD</div>
+        <div class="nav-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="rules.html">Rules</a>
+        </div>
+        <button class="menu-toggle">&#9776;</button>
+    </nav>
+</header>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    });
+</script>
+
 
     <main class="content">
         <div class="card">
@@ -50,10 +57,5 @@
         </a>
     </footer>
 
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-    </script>
 </body>
 </html>
