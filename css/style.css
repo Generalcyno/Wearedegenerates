@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #6A0DAD; /* Purple background */
+    background-color: #6A0DAD;
     color: white;
 }
 
@@ -31,7 +31,6 @@ nav {
     font-weight: bold;
 }
 
-/* Default Menu for Desktop */
 .nav-links {
     display: flex;
     gap: 20px;
@@ -50,7 +49,7 @@ nav {
     border-radius: 5px;
 }
 
-/* Mobile Menu (Hidden by Default) */
+/* Mobile Menu */
 .menu-toggle {
     display: none;
     font-size: 24px;
@@ -62,7 +61,7 @@ nav {
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Hide menu by default */
+        display: none;
         position: absolute;
         top: 60px;
         left: 50%;
@@ -86,6 +85,73 @@ nav {
     }
 
     .menu-toggle {
-        display: block; /* Show hamburger menu only on mobile */
+        display: block;
     }
+}
+
+/* Content */
+.content {
+    margin-top: 80px;
+    text-align: center;
+    padding: 20px;
+    min-height: calc(100vh - 150px);
+}
+
+/* Card Styling */
+.card {
+    background-color: white;
+    color: #4b0082;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    max-width: 600px;
+}
+
+.join-discord {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #5865F2;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.join-discord:hover {
+    background-color: #4854C3;
+}
+
+/* Footer */
+footer {
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    opacity: 0.8;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Floating Discord Button */
+.discord-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #5865F2;
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.discord-float:hover {
+    background-color: #4854C3;
+    transform: scale(1.1);
 }
