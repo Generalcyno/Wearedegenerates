@@ -36,8 +36,8 @@ nav a:hover {
     padding: 20px;
 }
 .card {
-    background-color: #ff69ff;
-    color: #4B0082;
+    background-color: #000000;
+    color: white;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
