@@ -2,60 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>We Are Degenerates</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-    <nav>
-        <div class="logo">WAD</div>
-        <div class="nav-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="rules.html">Rules</a>
-        </div>
-        <button class="menu-toggle">&#9776;</button>
-    </nav>
-</header>
 
-<script>
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-        document.querySelector('.nav-links').classList.toggle('active');
-    });
-</script>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">WAD</div>
+            <div class="nav-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="rules.html">Rules</a>
+            </div>
+            <button class="menu-toggle">&#9776;</button>
+        </nav>
+    </header>
 
-
-    <main class="content">
+    <!-- Main Content -->
+    <div class="content">
         <div class="card">
-            <h1>Welcome to We Are Degenerates</h1>
-            <p><strong>A fun & wild Discord BDSM community.</strong></p>
-            <p>Join like-minded individuals in a safe and engaging space. Discuss your kinks, share memes, and meet new friends.</p>
-            <a href="https://discord.com/invite/wadnsfw" class="join-btn">Join Our Discord</a>
+            <h1>We Are Degenerates</h1>
+            <p><strong>Discord BDSM server</strong></p>
+            <a href="https://discord.com/invite/wadnsfw" target="_blank" class="join-discord">Join Our Discord</a>
         </div>
+    </div>
 
-        <section class="features">
-            <div class="feature">
-                <h2>🔞 18+ Only</h2>
-                <p>This is an adults-only space. We take safety and verification seriously.</p>
-            </div>
-            <div class="feature">
-                <h2>🎭 Fun & Interactive</h2>
-                <p>Events, games, and roleplay channels to keep things exciting.</p>
-            </div>
-            <div class="feature">
-                <h2>🛡️ Safe & Moderated</h2>
-                <p>Active moderation to ensure a respectful and inclusive environment.</p>
-            </div>
-        </section>
-    </main>
-
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 We Are Degenerates. All rights reserved.</p>
-        <a href="https://discord.com/invite/wadnsfw" target="_blank" class="discord-float">
-            Join Our Discord
-        </a>
     </footer>
+
+    <!-- Floating Discord Button -->
+    <a href="https://discord.com/invite/wadnsfw" target="_blank" class="discord-float">
+        Join Discord
+    </a>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
