@@ -1,130 +1,28 @@
-/* Global Reset */
-* {
+body {
+    background-color: purple;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Body and Typography */
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.7;
-    background: #1a1a1a;
-    color: #e0e0e0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+nav {
+    background-color: #4B0082; /* Darker shade of purple */
+    padding: 10px;
+    text-align: center;
 }
 
-/* Navigation */
-.nav {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 1.5rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.nav button {
-    background: none;
-    border: 2px solid #9c27b0;
-    color: #e0e0e0;
-    padding: 0.8rem 1.5rem;
-    border-radius: 30px;
-    font-weight: 600;
+nav button {
+    background-color: #8A2BE2; /* Medium shade of purple */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 16px;
 }
 
-.nav button:hover {
-    background: #9c27b0;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(156, 39, 176, 0.4);
-}
-
-/* Main Content */
-.main-content {
-    flex: 1;
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 6rem 2rem;
-    background: linear-gradient(135deg, #6a1b9a, #9c27b0);
-    border-radius: 20px;
-    margin-bottom: 4rem;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Content Cards */
-.content-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    border-radius: 15px;
-    margin-bottom: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-}
-
-.content-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.content-card h2 {
-    color: #9c27b0;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background: rgba(0, 0, 0, 0.9);
-    margin-top: auto;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero {
-        padding: 4rem 1rem;
-    }
-    
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .nav {
-        gap: 1rem;
-        padding: 1rem;
-    }
-    
-    .nav button {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-    }
+nav button:hover {
+    background-color: #7B68EE; /* Lighter shade of purple */
 }
