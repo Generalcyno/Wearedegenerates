@@ -16,41 +16,31 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1; /* Place behind content */
+    overflow: hidden;
 }
 
-/* Create circles */
+/* Circle animation */
 .animated-background .circle {
     position: absolute;
-    background-color: purple;
+    background-color: rgba(138, 43, 226, 0.5); /* Transparent purple */
     border-radius: 50%;
-    animation: moveCircles 10s infinite;
-    opacity: 0.7;
+    animation: moveCircles 10s infinite linear alternate;
 }
+
+/* Random starting positions */
+.animated-background .circle:nth-child(1) { top: 10%; left: 10%; animation-duration: 12s; }
+.animated-background .circle:nth-child(2) { top: 20%; left: 50%; animation-duration: 15s; }
+.animated-background .circle:nth-child(3) { top: 30%; left: 80%; animation-duration: 18s; }
+.animated-background .circle:nth-child(4) { top: 50%; left: 30%; animation-duration: 20s; }
+.animated-background .circle:nth-child(5) { top: 70%; left: 60%; animation-duration: 25s; }
 
 @keyframes moveCircles {
-    0% {
-        top: -100px;
-        left: -100px;
-    }
-    25% {
-        top: 100%;
-        left: 0%;
-    }
-    50% {
-        top: 50%;
-        left: 100%;
-    }
-    75% {
-        top: 0%;
-        left: 50%;
-    }
-    100% {
-        top: -100px;
-        left: -100px;
-    }
+    0% { transform: translateY(0px) translateX(0px) scale(1); }
+    50% { transform: translateY(-50px) translateX(50px) scale(1.1); }
+    100% { transform: translateY(50px) translateX(-50px) scale(0.9); }
 }
 
-/* Style the header */
+/* Header */
 header {
     background-color: #4B0082; /* Dark Purple */
     padding: 10px;
@@ -61,7 +51,7 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation styling */
+/* Navigation */
 nav {
     display: flex;
     justify-content: center;
@@ -79,14 +69,14 @@ nav a:hover {
     background-color: #5A189A; /* Lighter purple hover effect */
 }
 
-/* Main content styling */
+/* Main Content */
 .content {
     margin-top: 80px; /* To account for fixed header */
     text-align: center;
     padding: 20px;
 }
 
-/* Card styling */
+/* Card */
 .card {
     background-color: white;
     color: #4B0082;
@@ -97,7 +87,7 @@ nav a:hover {
     max-width: 600px;
 }
 
-/* Footer styling */
+/* Footer */
 footer {
     margin-top: 50px;
     font-size: 14px;
