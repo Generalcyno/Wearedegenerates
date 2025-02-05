@@ -53,31 +53,58 @@ p {
     line-height: 1.8;
     font-size: 1.1em;
 }
-/* Policy Page Specific Styles */
-.content section {
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #eee;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6A0DAD; /* Purple background */
+    color: white;
+}
+header {
+    background-color: #4B0082; /* Dark Purple */
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+nav a:hover {
+    background-color: #5A189A; /* Lighter purple hover effect */
+}
+.content {
+    margin-top: 80px; /* To account for fixed header */
+    text-align: center;
+    padding: 20px;
+}
+.card {
+    background-color: white;
+    color: #4B0082;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    max-width: 600px;
+}
+footer {
+    margin-top: 50px;
+    font-size: 14px;
+    color: white;
+    opacity: 0.8;
 }
 
-.content h2 {
-    color: #6a1b9a;
-    font-size: 1.8em;
-    margin-bottom: 1rem;
-}
-
-.content ul {
-    margin: 1rem 0;
-    padding-left: 2rem;
-}
-
-.content li {
-    margin-bottom: 0.5rem;
-}
-
-/* Last section shouldn't have border */
-.content section:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
     padding-bottom: 0;
 }
