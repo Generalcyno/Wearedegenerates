@@ -28,11 +28,11 @@ body {
 }
 
 /* Random starting positions */
-.animated-background .circle:nth-child(1) { top: 10%; left: 10%; animation-duration: 12s; }
-.animated-background .circle:nth-child(2) { top: 20%; left: 50%; animation-duration: 15s; }
-.animated-background .circle:nth-child(3) { top: 30%; left: 80%; animation-duration: 18s; }
-.animated-background .circle:nth-child(4) { top: 50%; left: 30%; animation-duration: 20s; }
-.animated-background .circle:nth-child(5) { top: 70%; left: 60%; animation-duration: 25s; }
+.animated-background .circle:nth-child(1) { top: 10%; left: 10%; animation-duration: 5s; }
+.animated-background .circle:nth-child(2) { top: 20%; left: 50%; animation-duration: 6s; }
+.animated-background .circle:nth-child(3) { top: 30%; left: 80%; animation-duration: 8s; }
+.animated-background .circle:nth-child(4) { top: 50%; left: 30%; animation-duration: 10s; }
+.animated-background .circle:nth-child(5) { top: 70%; left: 60%; animation-duration: 12s; }
 
 @keyframes moveCircles {
     0% { transform: translateY(0px) translateX(0px) scale(1); }
