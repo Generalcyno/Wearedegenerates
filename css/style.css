@@ -65,6 +65,9 @@ nav {
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
+        position: absolute;
+        left: 10px; /* Move menu button to the left */
+        top: 15px;
     }
 
     .nav-links {
@@ -72,11 +75,11 @@ nav {
         flex-direction: column;
         position: absolute;
         top: 60px;
-        left: 0;
-        width: 100%;
+        left: 10px; /* Align menu items to the left */
+        width: auto;
         background: #4B0082;
-        padding: 10px 0;
-        text-align: center;
+        padding: 10px;
+        text-align: left;
         border-radius: 10px;
     }
 
@@ -87,8 +90,10 @@ nav {
     .nav-links a {
         display: block;
         padding: 12px;
+        text-align: left;
     }
 }
+
 
 /* Content */
 .content {
