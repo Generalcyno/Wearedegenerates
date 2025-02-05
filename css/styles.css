@@ -53,3 +53,31 @@ p {
     line-height: 1.8;
     font-size: 1.1em;
 }
+/* Policy Page Specific Styles */
+.content section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.content h2 {
+    color: #6a1b9a;
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+}
+
+.content ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Last section shouldn't have border */
+.content section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
