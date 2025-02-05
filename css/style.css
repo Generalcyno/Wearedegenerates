@@ -8,9 +8,9 @@ body {
     overflow: hidden; /* Prevent overflow from animated circles */
 }
 
-/* Animated background */
+/* Animated Background */
 .animated-background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -19,25 +19,29 @@ body {
     overflow: hidden;
 }
 
-/* Circle animation */
+/* Circles */
 .animated-background .circle {
     position: absolute;
     background-color: rgba(138, 43, 226, 0.5); /* Transparent purple */
     border-radius: 50%;
-    animation: moveCircles 10s infinite linear alternate;
+    animation: moveRandom 15s infinite alternate ease-in-out;
 }
 
 /* Random starting positions */
-.animated-background .circle:nth-child(1) { top: 10%; left: 10%; animation-duration: 5s; }
-.animated-background .circle:nth-child(2) { top: 20%; left: 50%; animation-duration: 6s; }
-.animated-background .circle:nth-child(3) { top: 30%; left: 80%; animation-duration: 8s; }
-.animated-background .circle:nth-child(4) { top: 50%; left: 30%; animation-duration: 10s; }
-.animated-background .circle:nth-child(5) { top: 70%; left: 60%; animation-duration: 12s; }
+.animated-background .circle:nth-child(1) { top: 10%; left: 10%; animation-duration: 14s; }
+.animated-background .circle:nth-child(2) { top: 30%; left: 50%; animation-duration: 18s; }
+.animated-background .circle:nth-child(3) { top: 50%; left: 20%; animation-duration: 22s; }
+.animated-background .circle:nth-child(4) { top: 70%; left: 60%; animation-duration: 20s; }
+.animated-background .circle:nth-child(5) { top: 85%; left: 35%; animation-duration: 25s; }
 
-@keyframes moveCircles {
-    0% { transform: translateY(0px) translateX(0px) scale(1); }
-    50% { transform: translateY(-50px) translateX(50px) scale(1.1); }
-    100% { transform: translateY(50px) translateX(-50px) scale(0.9); }
+/* Keyframes for random movement in all directions */
+@keyframes moveRandom {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(50px, -30px); }
+    40% { transform: translate(-60px, 50px); }
+    60% { transform: translate(40px, 70px); }
+    80% { transform: translate(-30px, -50px); }
+    100% { transform: translate(0, 0); }
 }
 
 /* Header */
