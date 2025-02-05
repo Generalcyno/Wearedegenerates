@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,6 +6,8 @@ body {
     background-color: #6A0DAD; /* Purple background */
     color: white;
 }
+
+/* Header & Navigation */
 header {
     background-color: #4B0082; /* Dark Purple */
     padding: 10px;
@@ -14,11 +17,13 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 nav {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
+
 nav a {
     color: white;
     text-decoration: none;
@@ -27,14 +32,20 @@ nav a {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
+
 nav a:hover {
     background-color: #5A189A; /* Lighter purple hover effect */
 }
+
+/* Content */
 .content {
     margin-top: 80px; /* To account for fixed header */
     text-align: center;
     padding: 20px;
+    min-height: calc(100vh - 150px); /* Pushes footer down */
 }
+
+/* Card Styling */
 .card {
     background-color: #000000;
     color: white;
@@ -42,12 +53,28 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: inline-block;
-    max-width: 600px;
+    width: 90%; /* Responsive width */
+    max-width: 600px; /* Prevents excessive width */
 }
+
+/* Text Styling */
+p {
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
 footer {
-    margin-top: 50px;
+    padding: 10px;
     font-size: 14px;
     color: white;
     opacity: 0.8;
     text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
