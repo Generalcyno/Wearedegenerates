@@ -1,106 +1,75 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #6A0DAD; /* Purple background */
-    color: white;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Header & Navigation */
-header {
-    background-color: #4B0082; /* Dark Purple */
-    padding: 10px;
+/* About Us Section */
+.about-us {
+    padding: 40px 20px;
+    background-color: #5A189A; /* Darker purple for contrast */
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #5A189A; /* Lighter purple hover effect */
-    transform: scale(1.1);
-}
-
-/* Main Content */
-main {
-    flex-grow: 1;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-main h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    font-size: 1.5rem;
-    font-weight: bold;
+.about-us h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.description {
+.about-us p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* Features Section */
+.features {
+    padding: 40px 20px;
+    background-color: #4B0082; /* Dark Purple */
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    background-color: #6A0DAD; /* Purple background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
     font-size: 1rem;
     line-height: 1.5;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    opacity: 0.9;
-    position: relative;
-}
-
-/* Floating Discord Button */
-.discord-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background-color: #5865F2; /* Discord brand color */
-    color: white;
-    padding: 12px 20px;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.discord-button:hover {
-    background-color: #4854C3; /* Slightly darker on hover */
-    transform: scale(1.1);
-}
-
-/* Responsive Design */
+/* Responsive Design for Features */
 @media (max-width: 768px) {
-    nav a {
-        padding: 8px 15px;
-        margin: 0 5px;
+    .feature-list {
+        flex-direction: column;
+        align-items: center;
     }
 
-    main h1 {
-        font-size: 2rem;
-    }
-
-    .subtitle {
-        font-size: 1.2rem;
-    }
-
-    .description {
-        font-size: 0.9rem;
+    .feature-item {
+        width: 80%;
     }
 }
