@@ -10,15 +10,20 @@ body {
 
 /* Navigation Bar */
 nav {
-    background: rgba(75, 0, 130, 0.9); /* Dark Purple with slight transparency */
+    background: rgba(75, 0, 130, 0.9); /* Dark Purple */
     padding: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
     position: fixed;
     top: 0;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+}
+
+/* Button Container */
+.nav-buttons {
+    display: flex;
+    gap: 15px;
 }
 
 /* Navigation Buttons */
@@ -41,7 +46,7 @@ nav {
 
 /* Main Content */
 .container {
-    padding-top: 80px; /* Adjust for fixed nav */
+    padding-top: 100px; /* Space for fixed nav */
 }
 
 /* Floating Discord Button */
@@ -65,16 +70,20 @@ nav {
     transform: scale(1.1);
 }
 
-/* Responsive Design */
+/* 🔹 Responsive Design (Fix Mobile Layout) */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
-        text-align: center;
         padding: 10px;
     }
-    .btn {
+    .nav-buttons {
+        flex-direction: column; /* Stack buttons on mobile */
+        align-items: center;
         width: 100%;
-        max-width: 200px;
+    }
+    .btn {
+        width: 90%; /* Make buttons full-width on mobile */
+        max-width: 300px;
+        text-align: center;
         display: block;
         margin: 5px auto;
     }
