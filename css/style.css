@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #6A0DAD;
     color: white;
+    text-align: center;
 }
 
 /* Header & Navigation */
@@ -29,11 +30,13 @@ nav {
 .logo {
     font-size: 20px;
     font-weight: bold;
+    color: white;
 }
 
+/* Menu Styles */
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .nav-links a {
@@ -60,17 +63,20 @@ nav {
 }
 
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
     .nav-links {
         display: none;
+        flex-direction: column;
         position: absolute;
         top: 60px;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
+        width: 100%;
         background: #4B0082;
-        width: 80%;
-        text-align: center;
-        flex-direction: column;
         padding: 10px 0;
+        text-align: center;
         border-radius: 10px;
     }
 
@@ -81,19 +87,16 @@ nav {
     .nav-links a {
         display: block;
         padding: 12px;
-        width: 100%;
-    }
-
-    .menu-toggle {
-        display: block;
     }
 }
 
 /* Content */
 .content {
-    margin-top: 80px;
-    text-align: center;
+    margin-top: 100px;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: calc(100vh - 150px);
 }
 
@@ -104,7 +107,6 @@ nav {
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: inline-block;
     max-width: 600px;
 }
 
