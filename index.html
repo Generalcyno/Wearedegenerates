@@ -9,24 +9,51 @@
 <body>
     <header>
         <nav>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="rules.html">Rules</a>
+            <div class="logo">WAD</div>
+            <div class="nav-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="rules.html">Rules</a>
+            </div>
+            <button class="menu-toggle">&#9776;</button>
         </nav>
     </header>
 
-    <div class="content">
+    <main class="content">
         <div class="card">
-            <h1>We Are Degenerates</h1>
-            <p><strong>Discord BDSM server</strong></p>
+            <h1>Welcome to We Are Degenerates</h1>
+            <p><strong>A fun & wild Discord BDSM community.</strong></p>
+            <p>Join like-minded individuals in a safe and engaging space. Discuss your kinks, share memes, and meet new friends.</p>
+            <a href="https://discord.com/invite/wadnsfw" class="join-btn">Join Our Discord</a>
         </div>
-    </div>
 
-   <footer>
-    <p>&copy; 2023 We Are Degenerates. All rights reserved.</p>
-<a href="https://discord.com/invite/wadnsfw" target="_blank" class="discord-float">
-    Join Our Discord
-</a>
-</footer>
+        <section class="features">
+            <div class="feature">
+                <h2>🔞 18+ Only</h2>
+                <p>This is an adults-only space. We take safety and verification seriously.</p>
+            </div>
+            <div class="feature">
+                <h2>🎭 Fun & Interactive</h2>
+                <p>Events, games, and roleplay channels to keep things exciting.</p>
+            </div>
+            <div class="feature">
+                <h2>🛡️ Safe & Moderated</h2>
+                <p>Active moderation to ensure a respectful and inclusive environment.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 We Are Degenerates. All rights reserved.</p>
+        <a href="https://discord.com/invite/wadnsfw" target="_blank" class="discord-float">
+            Join Our Discord
+        </a>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
