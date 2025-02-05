@@ -89,3 +89,30 @@ footer {
         font-size: 14px;
     }
 }
+/* Button Styles */
+button {
+    background-color: #4b0082;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: translateY(-5px);
+    background-color: #5a189a;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    background-color: #3a0072;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
