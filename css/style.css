@@ -6,49 +6,42 @@ body {
     background-color: #6A0DAD; /* Purple Background */
     color: white;
     text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(75, 0, 130, 0.9); /* Dark Purple with slight transparency */
+    padding: 15px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Container */
-.container {
-    text-align: center;
-}
-
-/* Title */
-h1 {
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
-/* Button Group */
-.button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* Button Styling */
+/* Navigation Buttons */
 .btn {
-    display: inline-block;
-    width: 200px;
-    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    color: white;
+    padding: 12px 20px;
     background-color: #4B0082; /* Dark Purple */
     border-radius: 8px;
-    text-decoration: none;
-    text-align: center;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Button Hover Effect */
+/* Hover Effect for Buttons */
 .btn:hover {
     background-color: #5A189A; /* Lighter Purple */
-    transform: scale(1.05);
+    transform: scale(1.1);
+}
+
+/* Main Content */
+.container {
+    padding-top: 80px; /* Adjust for fixed nav */
 }
 
 /* Floating Discord Button */
@@ -66,7 +59,7 @@ h1 {
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Discord Button Hover */
+/* Hover Effect for Discord Button */
 .discord-float:hover {
     background-color: #4854C3;
     transform: scale(1.1);
@@ -74,8 +67,15 @@ h1 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
     .btn {
         width: 100%;
-        max-width: 250px;
+        max-width: 200px;
+        display: block;
+        margin: 5px auto;
     }
 }
