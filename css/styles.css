@@ -15,19 +15,20 @@ body {
     backdrop-filter: blur(5px);
 }
 
-.nav button {
+.nav-buttons a {
     background: none;
     border: none;
     color: #6a1b9a;
-    padding: 15px 25px;
-    margin: 0 10px;
+    padding: 10px 20px;
+    margin: 0 5px;
     border-radius: 25px;
     font-weight: 600;
+    text-decoration: none; /* Ensure buttons look like buttons */
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
-.nav button:hover {
+.nav-buttons a:hover {
     background-color: #6a1b9a;
     color: white;
     transform: translateY(-2px);
