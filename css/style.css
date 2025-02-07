@@ -11,13 +11,13 @@ body {
 }
 
 body.dark-mode {
-    background-color: #1A1A1A; /* Dark background */
-    color: #E0E0E0; /* Light text */
+    background-color: #1A1A1A;
+    color: #E0E0E0;
 }
 
-/* Header & Navigation */
+/* Header */
 header {
-    background-color: #4B0082; /* Dark Purple */
+    background-color: #4B0082;
     padding: 10px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -25,375 +25,51 @@ header {
 
 nav {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
 }
 
-nav a {
+nav a, #theme-toggle {
     color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: 0.3s;
 }
 
-nav a:hover {
-    background-color: #5A189A; /* Lighter purple hover effect */
+nav a:hover, #theme-toggle:hover {
+    background-color: #5A189A;
     transform: scale(1.1);
-}
-
-#theme-toggle {
-    background-color: #5865F2; /* Discord brand color */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#theme-toggle:hover {
-    background-color: #4854C3; /* Slightly darker on hover */
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background-color: #5A189A; /* Darker purple for contrast */
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.hero.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.description {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 30px;
+    background-color: #5A189A;
 }
 
 .cta-button {
-    background-color: #5865F2; /* Discord brand color */
-    color: white;
-    padding: 12px 20px;
-    font-weight: bold;
-    border-radius: 8px;
     text-decoration: none;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 12px 20px;
+    background-color: #5865F2;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #4854C3; /* Slightly darker on hover */
+    background-color: #4854C3;
     transform: scale(1.1);
 }
 
-/* About Us Section */
-.about-us {
-    padding: 40px 20px;
-    background-color: #6A0DAD; /* Purple background */
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.about-us.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.about-us h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.about-us p {
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 20px;
-}
-
-/* Gallery Section */
-.gallery {
-    padding: 40px 20px;
-    background-color: #4B0082; /* Dark Purple */
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.gallery.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.gallery h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.gallery-item img {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.1);
-}
-
-/* Features Section */
+/* Features */
 .features {
-    padding: 40px 20px;
-    background-color: #5A189A; /* Darker purple for contrast */
     text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.features.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.features h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.feature-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: #5A189A;
+    padding: 40px;
 }
 
 .feature-item {
-    background-color: #6A0DAD; /* Purple background */
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-}
-
-.feature-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.feature-item p {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* Testimonials Section */
-.testimonials {
-    padding: 40px 20px;
-    background-color: #4B0082; /* Dark Purple */
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.testimonials.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.testimonials h2 {
-    font-size: 2rem;
     margin-bottom: 20px;
 }
-
-.testimonial-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.testimonial-item {
-    background-color: #5A189A; /* Darker purple for contrast */
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.testimonial-item p {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.testimonial-item .author {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-/* Events Section */
-.events {
-    padding: 40px 20px;
-    background-color: #6A0DAD; /* Purple background */
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.events.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.events h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.event-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.event-item {
-    background-color: #5A189A; /* Darker purple for contrast */
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.event-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.event-item p {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* FAQ Section */
-.faq {
-    padding: 40px 20px;
-    background-color: #4B0082; /* Dark Purple */
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.faq.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.faq h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.faq-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    background-color: #5A189A; /* Darker purple for contrast */
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.faq-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.faq-item p {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* Footer Section */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #4B0082; /* Dark Purple */
-    font-size: 14px;
-    opacity: 0.9;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav a {
-        padding: 8px 15px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .subtitle {
-        font-size: 1.2rem;
-    }
-
-    .description {
-        font-size: 0.9rem;
-    }
-
-    .feature-list,
-    .testimonial-list,
-    .event
