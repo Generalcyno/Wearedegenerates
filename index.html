@@ -3,145 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>We Are Degenerates</title>
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="description" content="Join We Are Degenerates, a thriving Discord BDSM community with over 29,000 members. Explore NSFW stickers, emotes, and connect with a wholesome yet kinky community.">
+    <title>Discord Member Count</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #181818;
+            color: #fff;
+        }
+        .count-box {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            background: #282828;
+        }
+        .total {
+            color: #ffcc00;
+        }
+        .online {
+            color: #00ff99;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="rules.html">Community Rules</a>
-            <button id="theme-toggle">Dark Mode</button>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>We Are Degenerates</h1>
-            <p class="subtitle">Your Ultimate Discord BDSM Community</p>
-            <p class="description">Explore NSFW stickers, emotes, and connect with a wholesome yet kinky community of like-minded individuals.</p>
-            <a href="https://discord.com/invite/wadnsfw" target="_blank" class="cta-button">Join Us on Discord</a>
-            <p class="member-count">Live Members: <span id="member-count">Loading...</span></p>
-        </div>
-    </section>
+    <h1>Discord Server Stats</h1>
+    
+    <div class="count-box total">
+        Total Members: <span id="totalCount">Loading...</span>
+    </div>
 
-    <!-- About Us Section -->
-    <section class="about-us">
-        <h2>About Us</h2>
-        <p><strong>We Are Degenerates</strong> was created on <strong>March 26, 2024</strong>, as a safe and inclusive space for individuals to explore their kinks, fetishes, and BDSM interests. Since then, our community has grown exponentially, reaching over <strong>29,000 members</strong> as of <strong>February 6, 2024</strong>.</p>
-        <p>Our mission is to provide a welcoming environment where members can express themselves freely, share their experiences, and connect with others who share similar interests. Whether you're new to the lifestyle or a seasoned enthusiast, you'll find a place here.</p>
-    </section>
+    <div class="count-box online">
+        Online Members: <span id="onlineCount">Loading...</span>
+    </div>
 
-    <!-- Gallery Section -->
-    <section class="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="images/sticker1.png" alt="Sticker 1"></div>
-            <div class="gallery-item"><img src="images/sticker2.png" alt="Sticker 2"></div>
-            <div class="gallery-item"><img src="images/sticker3.png" alt="Sticker 3"></div>
-            <div class="gallery-item"><img src="images/sticker4.png" alt="Sticker 4"></div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <h2>What We Offer</h2>
-        <div class="feature-list">
-            <div class="feature-item">
-                <h3>NSFW Stickers & Emotes</h3>
-                <p>Express yourself with our exclusive collection of NSFW stickers and emotes, designed for the kinky at heart.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Wholesome Community</h3>
-                <p>Join a supportive and inclusive community where you can be yourself without judgment.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Kinky Discussions</h3>
-                <p>Engage in open and respectful conversations about BDSM, kinks, and fetishes with fellow members.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Events & Activities</h3>
-                <p>Participate in community events, games, and activities designed to bring members closer together.</p>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Events Calendar Section -->
-    <section class="events">
-        <h2>Upcoming Events</h2>
-        <div class="event-list">
-            <div class="event-item">
-                <h3>Kinky Game Night</h3>
-                <p><strong>Date:</strong> February 20, 2024</p>
-                <p><strong>Time:</strong> 8:00 PM EST</p>
-                <p>Join us for a fun night of games and activities!</p>
-            </div>
-            <div class="event-item">
-                <h3>BDSM 101 Workshop</h3>
-                <p><strong>Date:</strong> March 5, 2024</p>
-                <p><strong>Time:</strong> 7:00 PM EST</p>
-                <p>Learn the basics of BDSM in a safe and welcoming environment.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-list">
-            <div class="faq-item">
-                <h3>How do I join the community?</h3>
-                <p>Click the "Join Us on Discord" button above to join our server!</p>
-            </div>
-            <div class="faq-item">
-                <h3>Is this community safe for beginners?</h3>
-                <p>Absolutely! We welcome everyone, regardless of experience level.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Are there rules for the community?</h3>
-                <p>Yes, we have clear rules to ensure a safe and respectful environment for all members.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 We Are Degenerates. All rights reserved.</p>
-    </footer>
-
-    <!-- JavaScript for Dark Mode and Member Count -->
     <script>
-        // Dark Mode Toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
+        async function updateMemberCounts() {
+            const response = await fetch("/.netlify/functions/getMembers");
+            const data = await response.json();
 
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            themeToggle.textContent = body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
-        });
-
-        // Discord Member Count
-        const memberCountElement = document.getElementById('member-count');
-
-        async function fetchMemberCount() {
-            try {
-                const response = await fetch('https://discord.com/api/guilds/1222281807022657546/widget.json');
-                const data = await response.json();
-                const memberCount = data.presence_count; // Number of online members
-                memberCountElement.textContent = memberCount.toLocaleString();
-            } catch (error) {
-                console.error('Error fetching member count:', error);
-                memberCountElement.textContent = 'Unavailable';
-            }
+            animateCount("totalCount", data.total_members);
+            animateCount("onlineCount", data.online_members);
         }
 
-        fetchMemberCount();
-        setInterval(fetchMemberCount, 60000); // Update every 60 seconds
+        function animateCount(elementId, newCount) {
+            let el = document.getElementById(elementId);
+            let oldCount = parseInt(el.textContent.replace(/,/g, "")) || 0;
+
+            const animate = () => {
+                if (oldCount < newCount) oldCount++;
+                else if (oldCount > newCount) oldCount--;
+
+                el.textContent = oldCount.toLocaleString();
+
+                if (oldCount !== newCount) requestAnimationFrame(animate);
+            };
+            animate();
+        }
+
+        setInterval(updateMemberCounts, 30000);
+        updateMemberCounts();
     </script>
+
 </body>
 </html>
