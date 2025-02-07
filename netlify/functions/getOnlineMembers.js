@@ -1,30 +1,33 @@
 import fetch from "node-fetch";
 
 export async function handler() {
-    const token = process.env.DISCORD_BOT_TOKEN;
-    const guildId = process.env.DISCORD_GUILD_ID;
+  const token = process.env.DISCORD_BOT_TOKEN;
+  const guildId = process.env.DISCORD_GUILD_ID;
+  
+  // Use the guild endpoint with with_counts=true to get total member count
+  const url = `https://discord.com/api/v10/guilds/${guildId}?with_counts=true`;
 
-    const response = await fetch(`https://discord.com/api/v10/guilds/${guildId}?with_counts=true`, {
-        headers: {
-            "Authorization": `Bot ${token}`,
-            "Content-Type": "application/json"
-        }
-    });
-
-    if (!response.ok) {
-        return {
-            statusCode: response.status,
-            body: JSON.stringify({ error: "Failed to fetch member count" }),
-        };
+  const response = await fetch(url, {
+    headers: {
+      "Authorization": `Bot ${token}`,
+      "Content-Type": "application/json"
     }
+  });
 
-    const guildData = await response.json();
-    const totalCount = guildData.approximate_member_count || 0;
-
+  if (!response.ok) {
     return {
-        statusCode: 200,
-        body: JSON.stringify({
-            total_members: totalCount.toLocaleString(),
-        }),
+      statusCode: response.status,
+      body: JSON.stringify({ error: "Failed to fetch guild info" }),
     };
+  }
+
+  const guildData = await response.json();
+  const totalCount = guildData.approximate_member_count;
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      total: totalCount
+    }),
+  };
 }
