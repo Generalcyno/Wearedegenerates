@@ -19,11 +19,14 @@ export async function handler() {
     }
 
     const members = await response.json();
+    const totalCount = members.length;
     const onlineCount = members.filter(member => member.presence?.status === "online").length;
 
     return {
         statusCode: 200,
-        body: JSON.stringify({ online_members: onlineCount.toLocaleString() }),
+        body: JSON.stringify({
+            total_members: totalCount.toLocaleString(),
+            online_members: onlineCount.toLocaleString()
+        }),
     };
 }
-
