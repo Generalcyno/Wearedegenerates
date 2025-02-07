@@ -23,12 +23,18 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
-    margin: 0 10px;
     border-radius: 5px;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -90,6 +96,11 @@ nav a:hover {
 .cta-button:hover {
     background-color: #4854C3; /* Slightly darker on hover */
     transform: scale(1.1);
+}
+
+.member-count {
+    font-size: 1rem;
+    margin-top: 20px;
 }
 
 /* About Us Section */
@@ -188,6 +199,45 @@ nav a:hover {
     line-height: 1.5;
 }
 
+/* Testimonials Section */
+.testimonials {
+    padding: 40px 20px;
+    background-color: #4B0082; /* Dark Purple */
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-item {
+    background-color: #5A189A; /* Darker purple for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.testimonial-item .author {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 /* Events Section */
 .events {
     padding: 40px 20px;
@@ -279,7 +329,6 @@ footer {
 @media (max-width: 768px) {
     nav a {
         padding: 8px 15px;
-        margin: 0 5px;
     }
 
     .hero h1 {
@@ -295,6 +344,7 @@ footer {
     }
 
     .feature-list,
+    .testimonial-list,
     .event-list,
     .faq-list {
         flex-direction: column;
@@ -302,6 +352,7 @@ footer {
     }
 
     .feature-item,
+    .testimonial-item,
     .event-item,
     .faq-item {
         width: 80%;
