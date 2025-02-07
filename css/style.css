@@ -63,6 +63,14 @@ nav a:hover {
     text-align: center;
     padding: 100px 20px;
     background-color: #5A189A; /* Darker purple for contrast */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.hero.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero h1 {
@@ -98,16 +106,19 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-.member-count {
-    font-size: 1rem;
-    margin-top: 20px;
-}
-
 /* About Us Section */
 .about-us {
     padding: 40px 20px;
     background-color: #6A0DAD; /* Purple background */
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-us.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .about-us h2 {
@@ -127,6 +138,14 @@ nav a:hover {
     padding: 40px 20px;
     background-color: #4B0082; /* Dark Purple */
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.gallery.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .gallery h2 {
@@ -159,6 +178,14 @@ nav a:hover {
     padding: 40px 20px;
     background-color: #5A189A; /* Darker purple for contrast */
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.features.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .features h2 {
@@ -204,6 +231,14 @@ nav a:hover {
     padding: 40px 20px;
     background-color: #4B0082; /* Dark Purple */
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.testimonials.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .testimonials h2 {
@@ -243,6 +278,14 @@ nav a:hover {
     padding: 40px 20px;
     background-color: #6A0DAD; /* Purple background */
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.events.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .events h2 {
@@ -282,6 +325,14 @@ nav a:hover {
     padding: 40px 20px;
     background-color: #4B0082; /* Dark Purple */
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.faq.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .faq h2 {
@@ -345,16 +396,4 @@ footer {
 
     .feature-list,
     .testimonial-list,
-    .event-list,
-    .faq-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature-item,
-    .testimonial-item,
-    .event-item,
-    .faq-item {
-        width: 80%;
-    }
-}
+    .event
