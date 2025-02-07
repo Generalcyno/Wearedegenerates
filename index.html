@@ -25,7 +25,8 @@
             <p class="subtitle">Your Ultimate Discord BDSM Community</p>
             <p class="description">Explore NSFW stickers, emotes, and connect with a wholesome yet kinky community of like-minded individuals.</p>
             <a href="https://discord.com/invite/wadnsfw" target="_blank" class="cta-button">Join Us on Discord</a>
-            <p class="member-count">Live Members: <span id="member-count">Loading...</span></p>
+            <p class="member-count">Total Members: <span id="total-members">Loading...</span></p>
+            <p class="member-count">Online Members: <span id="online-members">Loading...</span></p>
         </div>
     </section>
 
@@ -129,7 +130,7 @@
     </footer>
 
     <!-- JavaScript for Dark Mode and Member Count -->
-    <script>
+     <script>
         // Dark Mode Toggle
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
@@ -139,23 +140,22 @@
             themeToggle.textContent = body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
         });
 
-        // Discord Member Count
-        const memberCountElement = document.getElementById('member-count');
-
-        async function fetchMemberCount() {
+        // Fetch Total and Online Member Counts
+        async function fetchMemberCounts() {
             try {
-                const response = await fetch('https://discord.com/api/guilds/YOUR_GUILD_ID/widget.json');
+                const response = await fetch('/netlify/functions/getOnlineMembers');
                 const data = await response.json();
-                const memberCount = data.presence_count; // Number of online members
-                memberCountElement.textContent = memberCount.toLocaleString();
+                document.getElementById('total-members').textContent = data.total.toLocaleString();
+                document.getElementById('online-members').textContent = data.online.toLocaleString();
             } catch (error) {
-                console.error('Error fetching member count:', error);
-                memberCountElement.textContent = 'Unavailable';
+                console.error('Error fetching member counts:', error);
+                document.getElementById('total-members').textContent = 'Unavailable';
+                document.getElementById('online-members').textContent = 'Unavailable';
             }
         }
 
-        fetchMemberCount();
-        setInterval(fetchMemberCount, 60000); // Update every 60 seconds
+        fetchMemberCounts();
+        setInterval(fetchMemberCounts, 60000); // Update every 60 seconds
     </script>
 </body>
 </html>
