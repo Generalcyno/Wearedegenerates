@@ -4,7 +4,6 @@ export async function handler() {
   const token = process.env.DISCORD_BOT_TOKEN;
   const guildId = process.env.DISCORD_GUILD_ID;
   
-  // Use the guild endpoint with with_counts=true to get total member count
   const url = `https://discord.com/api/v10/guilds/${guildId}?with_counts=true`;
 
   const response = await fetch(url, {
