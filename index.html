@@ -11,9 +11,8 @@
     <!-- Header Section -->
     <header>
         <nav>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="rules.html">Community Rules</a>
+            <a href="about-us.html">About Us</a>
+            <a href="about-bots.html">About Bots</a>
             <button id="theme-toggle">Dark Mode</button>
         </nav>
     </header>
@@ -31,19 +30,8 @@
     <!-- About Us Section -->
     <section class="about-us">
         <h2>About Us</h2>
-        <p><strong>We Are Degenerates</strong> was created on <strong>March 26, 2024</strong>, as a safe and inclusive space for individuals to explore their kinks, fetishes, and BDSM interests. Since then, our community has grown exponentially, reaching over <strong>29,000 members</strong> as of <strong>February 6, 2024</strong>.</p>
-        <p>Our mission is to provide a welcoming environment where members can express themselves freely, share their experiences, and connect with others who share similar interests. Whether you're new to the lifestyle or a seasoned enthusiast, you'll find a place here.</p>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="images/sticker1.png" alt="Sticker 1"></div>
-            <div class="gallery-item"><img src="images/sticker2.png" alt="Sticker 2"></div>
-            <div class="gallery-item"><img src="images/sticker3.png" alt="Sticker 3"></div>
-            <div class="gallery-item"><img src="images/sticker4.png" alt="Sticker 4"></div>
-        </div>
+        <p><strong>We Are Degenerates</strong> was created on <strong>March 26, 2024</strong> as a safe and inclusive space for individuals to explore their kinks, fetishes, and BDSM interests. Since then, our community has grown to over <strong>29,000 members</strong> as of <strong>February 7, 2024</strong>, gaining up to 1,500 joins per day.</p>
+        <p>Our mission is to provide a welcoming environment where members can express themselves freely, share their experiences, and connect with others who share similar interests.</p>
     </section>
 
     <!-- Features Section -->
@@ -56,15 +44,19 @@
             </div>
             <div class="feature-item">
                 <h3>Wholesome Community</h3>
-                <p>Join a supportive and inclusive community where you can be yourself without judgment.</p>
+                <p>Join a supportive and inclusive space where you can be yourself without any judgment.</p>
             </div>
             <div class="feature-item">
                 <h3>Kinky Discussions</h3>
-                <p>Engage in open and respectful conversations about BDSM, kinks, and fetishes with fellow members.</p>
+                <p>Engage in open conversations about BDSM, kinks, and fetishes with fellow members.</p>
             </div>
             <div class="feature-item">
                 <h3>Events & Activities</h3>
-                <p>Participate in community events, games, and activities designed to bring members closer together.</p>
+                <p>Participate in events, games, and activities designed to bring members closer together.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Active Voice Chats</h3>
+                <p>Engage in lively voice chats across different categories such as NSFW, gaming, and lounges.</p>
             </div>
         </div>
     </section>
@@ -80,25 +72,6 @@
             <div class="testimonial-item">
                 <p>"The stickers and emotes are top-notch, and the people are even better. 10/10!"</p>
                 <p class="author">- Unknown user</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Events Calendar Section -->
-    <section class="events">
-        <h2>Upcoming Events</h2>
-        <div class="event-list">
-            <div class="event-item">
-                <h3>Kinky Game Night</h3>
-                <p><strong>Date:</strong> February 20, 2024</p>
-                <p><strong>Time:</strong> 8:00 PM EST</p>
-                <p>Join us for a fun night of games and activities!</p>
-            </div>
-            <div class="event-item">
-                <h3>BDSM 101 Workshop</h3>
-                <p><strong>Date:</strong> March 5, 2024</p>
-                <p><strong>Time:</strong> 7:00 PM EST</p>
-                <p>Learn the basics of BDSM in a safe and welcoming environment.</p>
             </div>
         </div>
     </section>
@@ -127,7 +100,6 @@
         <p>&copy; 2025 We Are Degenerates. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for Dark Mode and Scroll Animations -->
     <script>
         // Dark Mode Toggle
         const themeToggle = document.getElementById('theme-toggle');
@@ -136,26 +108,6 @@
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             themeToggle.textContent = body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
-        });
-
-        // Scroll Animations
-        const sections = document.querySelectorAll('section');
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            },
-            {
-                threshold: 0.1, // Trigger animation when 10% of the section is visible
-            }
-        );
-
-        sections.forEach((section) => {
-            observer.observe(section);
         });
     </script>
 </body>
