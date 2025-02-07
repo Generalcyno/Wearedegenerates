@@ -1,32 +1,30 @@
-import fetch from "node-fetch";
+const { Client, GatewayIntentBits } = require('discord.js');
 
-export async function handler() {
-  const token = process.env.DISCORD_BOT_TOKEN;
-  const guildId = process.env.DISCORD_GUILD_ID;
-  
-  const url = `https://discord.com/api/v10/guilds/${guildId}?with_counts=true`;
-
-  const response = await fetch(url, {
-    headers: {
-      "Authorization": `Bot ${token}`,
-      "Content-Type": "application/json"
-    }
+exports.handler = async (event, context) => {
+  const client = new Client({
+    intents: [
+      GatewayIntentBits.Guilds,
+      GatewayIntentBits.GuildMembers,
+    ],
   });
 
-  if (!response.ok) {
+  try {
+    await client.login(process.env.DISCORD_BOT_TOKEN); // Log in the bot
+    const guild = await client.guilds.fetch(process.env.GUILD_ID); // Fetch the guild
+    await guild.members.fetch(); // Fetch all members
+    const memberCount = guild.memberCount; // Get total member count
+
     return {
-      statusCode: response.status,
-      body: JSON.stringify({ error: "Failed to fetch guild info" }),
+      statusCode: 200,
+      body: JSON.stringify({ memberCount }),
     };
+  } catch (error) {
+    console.error('Error fetching member count:', error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Failed to fetch member count' }),
+    };
+  } finally {
+    client.destroy(); // Destroy the client to free resources
   }
-
-  const guildData = await response.json();
-  const totalCount = guildData.approximate_member_count;
-
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      total: totalCount
-    }),
-  };
-}
+};
