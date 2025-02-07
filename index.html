@@ -142,7 +142,7 @@
   // Fetch Total Member Count Only
   async function fetchMemberCounts() {
     try {
-      const response = await fetch('/netlify/functions/getOnlineMembers');
+      const response = await fetch('/.netlify/functions/getOnlineMembers');
       const data = await response.json();
       document.getElementById('total-members').textContent = data.total.toLocaleString();
     } catch (error) {
