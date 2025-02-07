@@ -25,7 +25,6 @@
             <p class="subtitle">Your Ultimate Discord BDSM Community</p>
             <p class="description">Explore NSFW stickers, emotes, and connect with a wholesome yet kinky community of like-minded individuals.</p>
             <a href="https://discord.com/invite/wadnsfw" target="_blank" class="cta-button">Join Us on Discord</a>
-            <p class="member-count">Total Members: <span id="total-members">Loading...</span></p>
         </div>
     </section>
 
@@ -76,11 +75,11 @@
         <div class="testimonial-list">
             <div class="testimonial-item">
                 <p>"This community is amazing! I've never felt so accepted and understood. Highly recommend!"</p>
-                <p class="author">- Unknown user</p>
+                <p class="author">- Jane Doe</p>
             </div>
             <div class="testimonial-item">
                 <p>"The stickers and emotes are top-notch, and the people are even better. 10/10!"</p>
-                <p class="author">- Unknown user</p>
+                <p class="author">- John Smith</p>
             </div>
         </div>
     </section>
@@ -128,7 +127,7 @@
         <p>&copy; 2025 We Are Degenerates. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for Dark Mode and Member Count -->
+    <!-- JavaScript for Dark Mode and Scroll Animations -->
     <script>
         // Dark Mode Toggle
         const themeToggle = document.getElementById('theme-toggle');
@@ -139,22 +138,25 @@
             themeToggle.textContent = body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
         });
 
-        // Fetch Member Count from Netlify Function
-        const memberCountElement = document.getElementById('member-count');
+        // Scroll Animations
+        const sections = document.querySelectorAll('section');
 
-        async function fetchMemberCount() {
-            try {
-                const response = await fetch('/.netlify/functions/member-count');
-                const data = await response.json();
-                memberCountElement.textContent = data.memberCount.toLocaleString();
-            } catch (error) {
-                console.error('Error fetching member count:', error);
-                memberCountElement.textContent = 'Unavailable';
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            },
+            {
+                threshold: 0.1, // Trigger animation when 10% of the section is visible
             }
-        }
+        );
 
-        fetchMemberCount();
-        setInterval(fetchMemberCount, 60000); // Update every 60 seconds
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
     </script>
 </body>
 </html>
