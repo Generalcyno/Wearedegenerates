@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(180deg, #8800ff 0%, #f700ff 80%, #5b0093 100%);
+    background: radial-gradient(closest-side, #ff00f7, #cc00ff, #9000c9);
     color: white;
     display: flex;
     flex-direction: column;
