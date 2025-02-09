@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: radial-gradient(closest-side, #ff00f7, #cc00ff, #9000c9);
+    background: radial-gradient(closest-side, #ff00f7, #b700ff, #8c00c3, #600085);
     color: white;
     display: flex;
     flex-direction: column;
@@ -24,6 +24,53 @@ body {
 
 body {
     animation: fadeZoomSlide 1s ease-out;
+}
+
+/* Age Gate Modal Styles */
+.age-gate-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.age-gate-content {
+    background-color: #210059;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    color: #ffffff;
+}
+
+.age-gate-buttons {
+    margin-top: 20px;
+}
+
+.age-gate-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#yesButton {
+    background-color: #e100ff;
+    color: white;
+}
+
+#noButton {
+    background-color: #ff0000;
+    color: white;
 }
 
 
@@ -53,7 +100,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #6d007b; /* Lighter purple hover effect */
+    background-color: #6d007b;
     transform: scale(1.1);
 }
 
@@ -83,38 +130,52 @@ nav a:hover {
 }
 
 .cta-button {
-    background-color: #5865F2; /* Discord brand color */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #5865F2;
     color: white;
     padding: 12px 20px;
     font-weight: bold;
-    border-radius: 10px 100px / 120px;
+    border-radius: 10px;
     text-decoration: none;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 16px;
+    white-space: nowrap;
+    opacity: 1; /* Ensure it's always visible */
 }
 
 .cta-button:hover {
-    background-color: #4854C3; /* Slightly darker on hover */
+    background-color: #4854C3;
     transform: scale(1.1);
 }
+
+.cta-icon {
+    width: 24px; /* Set the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    flex-shrink: 0; /* Prevent the logo from shrinking */
+    opacity: 1; /* Ensure the icon is always visible */
+}
+
 
 /* About Sections */
 .about-owner {
     padding: 40px 20px;
-    background-color: #9600d6; /* Purple background */
+    background-color: #9600d6;
     text-align: center;
-    border: 3px solid #bb00ff; /* Add a solid border */
-    border-radius: 20px; /* Rounded corners for the box */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
-    max-width: 800px; /* Limit the width */
-    margin: 20px auto; /* Center align the section */
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    border: 3px solid #bb00ff;
+    border-radius: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    max-width: 800px; 
+    margin: 20px auto; 
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .about-owner:hover {
-    transform: scale(1.05); /* Slightly increase size */
-    border-color: #ff00ff; /* Change border color to pink */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow */
+    transform: scale(1.05); 
+    border-color: #ff00ff; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 .about-owner h2 {
@@ -151,7 +212,7 @@ nav a:hover {
 /* Features Section */
 .features, .testimonials, .events, .faq {
     padding: 40px 20px;
-    background-color: #5A189A;
+    background: linear-gradient(0.25turn, #66008f, #d902ff, #4d0085);
     text-align: center;
 }
 
@@ -184,7 +245,7 @@ nav a:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #4B0082;
+    background: linear-gradient(0.25turn, #66008f, #d902ff, #4d0085);
     font-size: 14px;
     opacity: 0.9;
 }

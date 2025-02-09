@@ -7,6 +7,7 @@ body {
     background-size: cover;
     color: #ffffff;
 }
+/* animation */
 @keyframes fadeZoomSlide {
     0% {
         opacity: 0;
@@ -82,7 +83,7 @@ body {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #9d00ff; /* Matches the top color of the gradient */
+    background-color: #9d00ff;
     font-size: 14px;
     opacity: 0.9;
 }
@@ -113,7 +114,7 @@ footer {
 }
 
 .nav-button:hover {
-    background-color: #6d007b; /* Lighter purple hover effect */
+    background-color: #6d007b;
     transform: scale(1.05);
 }
 

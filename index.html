@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo.png">
     <title>We Are Degenerates</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="description" content="Join We Are Degenerates, a thriving Discord BDSM community with over 29,000 members. Explore NSFW stickers, emotes, and connect with a wholesome yet kinky discord nsfw server or community.">
 </head>
 <body>
+
+<!-- Age Gate Pop-Up -->
+<div id="ageGateModal" class="age-gate-modal">
+    <div class="age-gate-content">
+        <h2>Are you over 18 years old?</h2>
+        <p>You must be 18 or older to access this website.</p>
+        <div class="age-gate-buttons">
+            <button id="yesButton">Yes</button>
+            <button id="noButton">No</button>
+        </div>
+    </div>
+</div>
+
     <!-- Header Section -->
     <header>
         <nav>
@@ -22,7 +36,8 @@
             <h1>We Are Degenerates</h1>
             <p class="subtitle">Your Ultimate Discord BDSM discord Community</p>
             <p class="description">Explore NSFW stickers, emotes, and connect with a wholesome yet kinky community of like-minded individuals in our discord nsfw server.</p>
-            <a href="https://discord.com/invite/wadnsfw" target="_blank" class="cta-button">Join Us on Discord</a>
+            <a href="https://discord.com/invite/wadnsfw" target="_blank" class="cta-button">
+                <img src="images/discord-logo.png" alt="Discord Logo" class="cta-icon"> Join Us on Discord <img src="images/logo.png" alt="Discord Logo" class="cta-icon"></a>
         </div>
     </section>
 
@@ -40,7 +55,7 @@
     <!-- About Us Section -->
     <section class="about-us">
         <h2>About Us</h2>
-        <p><strong>We Are Degenerates</strong> was created on <strong>March 26, 2024</strong>, as a safe and inclusive space for individuals to explore their kinks, fetishes, and BDSM interests. Since then, our community has grown exponentially, reaching over <strong>29,000 members</strong> as of <strong>February 7, 2024</strong> and still growing getting up to 1500 joins per day.</p>
+        <p><strong>We Are Degenerates</strong> was created on <strong>March 26, 2024</strong>, as a safe and inclusive space for individuals to explore their kinks, fetishes, and BDSM interests. Since then, our community has grown exponentially, reaching over <strong>29,000 members</strong> as of <strong>February 7, 2025</strong> and still growing getting up to 1500 joins per day.</p>
         <p>Our mission is to provide a welcoming environment where members can express themselves freely, share their experiences, and connect with others who share similar interests. Whether you're new to the lifestyle or an experienced kinky degenerate, you'll find a place here.</p>
     </section>
 
@@ -125,6 +140,30 @@
     <footer>
         <p>&copy; 2025 We Are Degenerates. All rights reserved.</p>
     </footer>
+
+    <script> 
+        const ageGateModal = document.getElementById('ageGateModal');
+        const yesButton = document.getElementById('yesButton');
+        const noButton = document.getElementById('noButton');
+
+        if (!sessionStorage.getItem('ageVerified')) {
+            document.addEventListener('DOMContentLoaded', function() {
+                ageGateModal.style.display = 'flex';
+            });
+        }
+    
+        // Handle "Yes" button click
+        yesButton.addEventListener('click', function() {
+            sessionStorage.setItem('ageVerified', 'true');
+            ageGateModal.style.display = 'none';
+        });
+    
+        // Handle "No" button click
+        noButton.addEventListener('click', function() {
+    window.location.href = '/access-denied.html';
+});
+    </script>
+    
 
 </body>
 </html>
