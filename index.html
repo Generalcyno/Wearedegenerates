@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/logo.png">
     <title>We Are Degenerates</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <meta name="description" content="Join We Are Degenerates, a thriving Discord BDSM community with over 29,000 members. Explore NSFW stickers, emotes, and connect with a wholesome yet kinky discord nsfw server or community.">
 </head>
 <body>
@@ -17,7 +17,7 @@
         <p>You must be 18 or older to access this website.</p>
         <div class="age-gate-buttons">
             <button id="yesButton">Yes</button>
-            <button id="noButton">No</button>
+            <a id="noButton" href="access-denied.html">No</a>
         </div>
     </div>
 </div>
@@ -158,10 +158,6 @@
             ageGateModal.style.display = 'none';
         });
     
-        // Handle "No" button click
-        noButton.addEventListener('click', function() {
-    window.location.href = '/access-denied.html';
-});
     </script>
     
 

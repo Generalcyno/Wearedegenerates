@@ -54,13 +54,18 @@ body {
     margin-top: 20px;
 }
 
-.age-gate-buttons button {
+.age-gate-buttons button,
+.age-gate-buttons a {
     padding: 10px 20px;
     margin: 0 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    text-decoration: none;
+    display: inline-block; 
+    text-align: center;
+    transition: background 0.3s ease-in-out;
 }
 
 #yesButton {
@@ -68,10 +73,19 @@ body {
     color: white;
 }
 
+#yesButton:hover {
+    background-color: #ba00cc;
+}
+
 #noButton {
     background-color: #ff0000;
     color: white;
 }
+
+#noButton:hover {
+    background-color: #cc0000;
+}
+
 
 
 /* Header & Navigation */
