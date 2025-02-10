@@ -1,6 +1,6 @@
-import 'dotenv/config';
+import 'dotenv/config'; // Only for local development
 import fs from 'fs';
-import fetch from 'node-fetch';
+import fetch from 'node-fetch'; // Remove if using Node.js 18+
 
 const AUTH_KEY = process.env.AUTH_KEY; // Load from Netlify env vars
 
@@ -26,7 +26,9 @@ export async function handler(event) {
         if (!messages.length) return { statusCode: 404, body: JSON.stringify({ error: "No messages found." }) };
 
         const filePath = generateHTML(messages);
-        const fileLink = `https://wearedegenerates.org/${filePath}`;
+
+        // Upload the file to a persistent storage service (e.g., AWS S3)
+        const fileLink = await uploadFileToStorage(filePath); // Implement this function
 
         return { statusCode: 200, body: JSON.stringify({ message: "Transcript generated", link: fileLink }) };
     } catch (error) {
@@ -52,7 +54,7 @@ async function getMessages(botToken, channelId) {
 
 function generateHTML(messages) {
     const fileName = `messages_${Date.now()}.html`;
-    const filePath = `/tmp/${fileName}`; // ✅ Store file in /tmp/
+    const filePath = `/tmp/${fileName}`; // Store file in /tmp/
 
     const htmlContent = `
     <html>
@@ -91,5 +93,11 @@ function generateHTML(messages) {
     fs.writeFileSync(filePath, htmlContent);
     console.log(`Transcript saved at: ${filePath}`);
 
-    return fileName;
+    return filePath;
+}
+
+async function uploadFileToStorage(filePath) {
+    // Implement this function to upload the file to a storage service (e.g., AWS S3)
+    // Return the public URL of the uploaded file
+    throw new Error("File upload functionality not implemented.");
 }
