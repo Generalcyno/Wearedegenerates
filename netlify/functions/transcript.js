@@ -1,6 +1,6 @@
 require('dotenv').config();
 const fs = require('fs');
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 const AUTH_KEY = process.env.AUTH_KEY; // Load from Netlify env vars
 
