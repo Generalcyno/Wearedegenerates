@@ -51,6 +51,9 @@ async function getMessages(botToken, channelId) {
 }
 
 function generateHTML(messages) {
+    const fileName = `messages_${Date.now()}.html`;
+    const filePath = `./public/${fileName}`;
+
     const htmlContent = `
     <html>
     <head><title>Chat Transcript</title></head>
@@ -85,11 +88,10 @@ function generateHTML(messages) {
     </body>
     </html>`;
 
-    const fileName = `messages_${Date.now()}.html`;
-    fs.writeFileSync(`./public/${fileName}`, htmlContent);
+    fs.writeFileSync(filePath, htmlContent);
+    console.log(`Transcript saved at: ${filePath}`);
 
     return fileName;
 }
-
 
 app.listen(PORT, () => console.log(`API running on port ${PORT}`));
