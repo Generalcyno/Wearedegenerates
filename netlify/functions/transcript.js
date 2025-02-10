@@ -2,16 +2,15 @@ import 'dotenv/config';
 import fs from 'fs';
 import fetch from 'node-fetch';
 
-
 const AUTH_KEY = process.env.AUTH_KEY; // Load from Netlify env vars
 
-exports.handler = async (event) => {
+export async function handler(event) {
     if (event.httpMethod !== "POST") {
         return { statusCode: 405, body: JSON.stringify({ error: "Method Not Allowed" }) };
     }
 
     const { botToken, channelId } = JSON.parse(event.body);
-    const providedAuthKey = event.headers['authorization'];
+    const providedAuthKey = event.headers['authorization'] || event.headers['Authorization'];
 
     // Validate auth key
     if (!providedAuthKey || providedAuthKey !== AUTH_KEY) {
@@ -33,12 +32,15 @@ exports.handler = async (event) => {
     } catch (error) {
         return { statusCode: 500, body: JSON.stringify({ error: error.message }) };
     }
-};
+}
 
 async function getMessages(botToken, channelId) {
     const response = await fetch(`https://discord.com/api/v10/channels/${channelId}/messages?limit=50`, {
         method: "GET",
-        headers: { "Authorization": `Bot ${botToken}` }
+        headers: { 
+            "Authorization": `Bot ${botToken}`,
+            "Content-Type": "application/json"
+        }
     });
 
     if (!response.ok) {
@@ -50,7 +52,7 @@ async function getMessages(botToken, channelId) {
 
 function generateHTML(messages) {
     const fileName = `messages_${Date.now()}.html`;
-    const filePath = `./public/${fileName}`;
+    const filePath = `/tmp/${fileName}`; // ✅ Store file in /tmp/
 
     const htmlContent = `
     <html>
