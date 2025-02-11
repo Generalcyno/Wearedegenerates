@@ -13,8 +13,7 @@
             color: #ffffff;
             display: flex;
             flex-direction: column;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
         }
 
         a {
@@ -30,6 +29,9 @@
             align-items: center;
             background: #2a0845; /* Darker purple header */
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .header h1 {
@@ -67,6 +69,9 @@
             position: fixed;
             height: 100%;
             z-index: 1000;
+            top: 0;
+            left: 0;
+            overflow-y: auto; /* Allow sidebar to scroll if content overflows */
         }
 
         .sidebar.open {
@@ -93,7 +98,7 @@
         .content {
             flex-grow: 1;
             padding: 20px;
-            overflow-y: auto;
+            overflow-y: auto; /* Allow content to scroll */
             margin-left: 0;
             transition: margin-left 0.3s ease;
         }
@@ -171,6 +176,44 @@
 
         .on-this-page a:hover, .on-this-page a.active {
             background: #6a2a8e; /* Lighter purple on hover */
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.2em; /* Smaller title on mobile */
+            }
+
+            .header button {
+                padding: 8px 12px; /* Smaller buttons on mobile */
+                font-size: 0.8em;
+            }
+
+            .sidebar {
+                width: 80%; /* Sidebar takes up most of the screen on mobile */
+            }
+
+            .content.shifted {
+                margin-left: 0; /* No shift on mobile when sidebar is open */
+            }
+
+            .on-this-page {
+                right: 10px; /* Adjust position for smaller screens */
+                top: 70px;
+                padding: 10px;
+            }
+
+            .section {
+                padding: 15px; /* Less padding on mobile */
+            }
+
+            .section-title {
+                font-size: 1.5em; /* Smaller section titles */
+            }
+
+            ul li {
+                font-size: 0.9em; /* Smaller text for better readability */
+            }
         }
     </style>
 </head>
