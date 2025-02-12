@@ -1,0 +1,7 @@
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+
+  [[redirects]]
+  from = "/images"
+  to = "/index.html"
