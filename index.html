@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <meta name="description" content="Join We Are Degenerates, a thriving Discord BDSM community with over 29,000 members. Explore NSFW stickers, emotes, and connect with a wholesome yet kinky discord nsfw server or community.">
     <meta name="theme-color" content="#720092">
+    <meta property="og:image" content="images/logo.png">
 </head>
 <body>
 
@@ -145,11 +146,11 @@
     <script> 
         const ageGateModal = document.getElementById('ageGateModal');
         const yesButton = document.getElementById('yesButton');
-        const noButton = document.getElementById('noButton');
-
+        
         if (!sessionStorage.getItem('ageVerified')) {
             document.addEventListener('DOMContentLoaded', function() {
                 ageGateModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
             });
         }
     
@@ -157,9 +158,9 @@
         yesButton.addEventListener('click', function() {
             sessionStorage.setItem('ageVerified', 'true');
             ageGateModal.style.display = 'none';
+            document.body.style.overflow = ''; // Restore scrolling
         });
-    
-    </script>
+    </script>    
     
 
 </body>
