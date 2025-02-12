@@ -1,8 +1,8 @@
 [[redirects]]
   from = "/*"
-  to = "/"
+  to = "/index"
 
   [[redirects]]
   from = "/images/*"
-  to = "/"
+  to = "/index"
   
