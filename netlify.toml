@@ -3,5 +3,9 @@
   to = "/index"
 
   [[redirects]]
-  from = "/images/*"
+  from = "/"
+  to = "/index"
+
+  [[redirects]]
+  from = "/images"
   to = "/index"
