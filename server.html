@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>We Are Degenerates - About Us</title>
-    <link rel="stylesheet" href="/css/server.css">
-</head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" href="/favicon.png" type="image/png">
+        <link rel="apple-touch-icon" href="/favicon.png">
+    
+        <title>About server - We Are Degenerates</title>
+        <link rel="stylesheet" href="/css/server.css">
+    
+        <meta name="description" content="Welcome to the NSFW dungeon of degens, Nsfw 18+ We are DEGENERATES bdsm | nsfw stickers & emotes. A dsicord nsfw and bdsm server. Find more about the server in this page.">
+        <meta name="theme-color" content="#720092">
+    
+        <meta property="og:image" content="https://wearedegenerates.org/images/logo.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:url" content="https://wearedegenerates.org/server">
+        <meta property="og:type" content="website">
+    
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    </head>
+
 <body>
+
+<!-- Age Gate Pop-Up -->
+<div id="ageGateModal" class="age-gate-modal">
+    <div class="age-gate-content">
+        <h2>Are you over 18 years old?</h2>
+        <p>You must be 18 or older to access this website.</p>
+        <div class="age-gate-buttons">
+            <button id="yesButton">Yes</button>
+            <a id="noButton" href="access-denied.html">No</a>
+        </div>
+    </div>
+</div>
+
+
     <div class="navigation-buttons">
         <a href="/" class="nav-button">Home</a>
         <a href="server/rules.html" class="nav-button">Rules</a>
@@ -20,10 +51,48 @@
             <p>Welcome to <strong>We Are Degenerates</strong>, a BDSM-centered community where like-minded individuals can connect, explore, and have fun in a safe and welcoming space. Originally founded on <strong>March 26, 2024</strong>, our journey began under the name <em>“We Are Horny”</em> before evolving into a true community on <strong>May 21, 2024</strong> marking the birth of the server you know today.</p>
             <p>Our server is built on engagement, inclusivity, and interaction. We have an active and dedicated staff to ensure a safe and enjoyable environment, along with fun interactive bots to enhance your experience. Our custom server economy adds another layer of entertainment, and we offer exclusive server subscriptions for premium features. The NSFW section of the server is fully ID-gated, meaning users must complete ID verification to gain access, ensuring a secure and responsible space for adult content.</p>
             <p>Whether you’re here to chat, learn, or indulge in your kinks, <strong>We Are Degenerates</strong> is the perfect place to express yourself and connect with others who share your interests. Join us and be part of our ever-growing, open-minded community!</p>
+            <p>You can read about server rules and much more by clicking any of the button above. By joining the server, you have agreed to all those sections.</p>
         </section>
+
+        <section class="about">
+           <h1>Our mission</h1>
+              <p>Our mission is to provide a safe, inclusive, and engaging space for individuals to explore their kinks, connect with like-minded people, and have fun in a welcoming community. We strive to create an environment where everyone feels respected, valued, and free to express themselves without judgment. Through active moderation, interactive bots, and engaging content, we aim to foster a positive and enjoyable experience for all members. Our commitment to privacy, security, and responsible content ensures that our server remains a safe and trusted space.</p>
+        </section>
+
+        <section Class="about">
+            <h1>Our staff</h1>
+            <p>Our staff team is dedicated to ensuring that <strong>We Are Degenerates</strong> remains a safe, welcoming, and enjoyable community for all members. Our moderators work diligently to enforce server rules, resolve conflicts, and maintain a positive atmosphere. They are available to assist with any questions, concerns, or issues that may arise, and are committed to upholding the values of our server. Our staff team is here to support you, guide you, and help you make the most of your experience in our server.</p>
+            </section>
+        
+        <section class="about">
+            <h1>Our members</h1>
+            <p>Our members are some of the most caring and compassionate people you could ever hope to meet. They come together not just because of shared interests but because they truly care about each other’s well-being. In our BDSM community, respect, trust, and understanding are at the heart of everything we do.<br><br>Here, people genuinely listen and support each other, no matter where they are on their journey. Whether someone is exploring new aspects of themselves or simply looking for friendship and connection, there’s always a kind word, a helping hand, or a thoughtful piece of advice waiting for them. It’s a space where everyone feels safe to be their true selves, free from judgment and full of encouragement.<br><br>What makes this community so special is the way our members uplift one another and create an atmosphere of genuine care and respect. During both good times and challenges, they stand by each other, making sure everyone feels valued and supported. It’s not just about shared kinks or interests; it’s about shared humanity and the meaningful bonds that form along the way.<br><br>Together, we’ve built a place that shows a BDSM community can be both empowering and deeply wholesome. It’s all thanks to the incredible people who make up this community, creating an environment where kindness, care, and connection always come first.</p>
+            </section>
+
     </main>
     <footer>
         <p>&copy; 2025 We Are Degenerates. All rights reserved.</p>
     </footer>
+
+    <script> 
+        const ageGateModal = document.getElementById('ageGateModal');
+        const yesButton = document.getElementById('yesButton');
+        
+        if (!sessionStorage.getItem('ageVerified')) {
+            document.addEventListener('DOMContentLoaded', function() {
+                ageGateModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
+            });
+        }
+    
+        // Handle "Yes" button click
+        yesButton.addEventListener('click', function() {
+            sessionStorage.setItem('ageVerified', 'true');
+            ageGateModal.style.display = 'none';
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+    </script>
+
+
 </body>
 </html>

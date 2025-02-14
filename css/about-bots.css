@@ -6,10 +6,10 @@ body {
     background: linear-gradient(0.25turn, #5800a5, #ae00ae, #75009f);
     background-size: cover;
     color: #ffffff;
+
 }
 
-
-
+/* Header */
 .body-content {
     max-width: 800px;
     margin: 0 auto;
@@ -17,7 +17,6 @@ body {
     background-color: rgba(255, 0, 255, 0.071);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(17, 0, 255, 0.1);
-
 }
 
 /* About Bots Section */

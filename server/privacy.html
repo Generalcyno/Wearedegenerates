@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Degen & Degen 2.0</title>
-    <link rel="stylesheet" href="/css/server.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" href="/favicon.png" type="image/png">
+        <link rel="apple-touch-icon" href="/favicon.png">
+    
+        <title>Server Privacy policy - We Are Degenerates</title>
+        <link rel="stylesheet" href="/css/server.css">
+    
+        <meta name="description" content="Welcome Nsfw 18+ We are degenerates BDSM | nsfw stickers & emotes server privacy policy page. Read our detailes privacy policy here.">
+        <meta name="theme-color" content="#720092">
+    
+        <meta property="og:image" content="https://wearedegenerates.org/images/logo.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:url" content="https://wearedegenerates.org/server/privacy">
+        <meta property="og:type" content="website">
+    
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    </head>
+
 <body>
+
+<!-- Age Gate Pop-Up -->
+<div id="ageGateModal" class="age-gate-modal">
+    <div class="age-gate-content">
+        <h2>Are you over 18 years old?</h2>
+        <p>You must be 18 or older to access this website.</p>
+        <div class="age-gate-buttons">
+            <button id="yesButton">Yes</button>
+            <a id="noButton" href="access-denied.html">No</a>
+        </div>
+    </div>
+</div>
+
     <div class="navigation-buttons">
         <a href="/server.html" class="nav-button">Back</a>
     </div>
     <main>
-        <section class="privacy-policy">
+        <section class="server-rules">
             <h1>Server Privacy Policy</h1>
-            <p><strong>Effective Date: 2024/2025</strong></p>
 
-            <h2>1. Introduction</h2>
+            <h2><br>1. Introduction</h2>
             <p>Welcome to <strong>We are degenerates</strong>. This Privacy Policy explains what information we collect, how it is used, and your rights regarding your data.</p>
 
             <h2>2. Information We Collect</h2>
@@ -40,7 +68,7 @@
             <p>We do not sell, share, or distribute your data to third parties.</p>
 
             <h2>4. Data Storage & Security</h2>
-            <p>We take appropriate measures to protect your data, including encryption and secure storage. Your information is retained only as long as necessary for the intended purpose and is deleted upon request or when you leave the server.</p>
+            <p>We take appropriate measures to protect your data, including secure storage. Your information is retained only as long as necessary for the intended purpose and is deleted upon request or when you leave the server IF applicable.</p>
 
             <h2>5. Data Sharing</h2>
             <p>Your data is not shared. Server administrators os staff members may have access to collected information for moderation purposes, but it will not be shared beyond the server environment.</p>
@@ -60,14 +88,34 @@
             <h2>8. Contact Information</h2>
             <p>If you have any questions or concerns about this Privacy Policy, please reach out to us.</p>
 
-            <h2>9. Disclaimer</h2>
-            <p><strong>We are not responsible for the leakage of any photos, content, or messages shared within the server. This is a public server, and users should be mindful of the content they share.</strong></p>
+            <h1><br><br>Disclaimer</h1>
+            <p>We are not responsible for the leakage of any photos, content, or messages shared within the server. This is a public server, and while we strive to create a respectful and safe environment, we cannot guarantee the privacy or security of any information shared here. Users should always be mindful of the nature of the content they post and consider the potential risks before sharing personal or sensitive information.<br><br> By participating in this community, users acknowledge and accept full responsibility for their own privacy and the security of the information they choose to share. This includes any text, images, videos, or other media posted within the server. We strongly advise users to exercise caution and discretion, especially when sharing content that could be considered personal or identifying.<br><br>It’s important to understand that while we do our best to maintain a positive and respectful atmosphere, we cannot control how other users may use or distribute the content shared within the server. Once information is posted, it may be saved, shared, or copied by others, and we are not liable for any consequences that may arise from such actions.<br><br>Any liabilities arising from the sharing of personal content rest solely on the user and not on the server, its administrators, or moderators. By continuing to engage with the community, users agree to these terms and acknowledge that they are solely responsible for the management of their personal information. Please be cautious and prioritize your privacy and safety at all times.</p>
 
-            <p>By joining <strong>We Are Degenerates</strong>, you acknowledge that you have read and understood this Privacy Policy.</p>
+            <p><br>By joining <strong>We Are Degenerates</strong>, you acknowledge that you have read and understood this Privacy Policy.</p>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 We Are Degenerates. All rights reserved.</p>
     </footer>
+
+    <script> 
+        const ageGateModal = document.getElementById('ageGateModal');
+        const yesButton = document.getElementById('yesButton');
+        
+        if (!sessionStorage.getItem('ageVerified')) {
+            document.addEventListener('DOMContentLoaded', function() {
+                ageGateModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
+            });
+        }
+    
+        // Handle "Yes" button click
+        yesButton.addEventListener('click', function() {
+            sessionStorage.setItem('ageVerified', 'true');
+            ageGateModal.style.display = 'none';
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+    </script>
+
 </body>
 </html>

@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscriptions - We Are Degenerates</title>
-    <link rel="stylesheet" href="/css/server.css">
-    <meta name="description" content="Become a member of we are degenerates, a discord nsfw server.">
-    <meta name="theme-color" content="#720092">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" href="/favicon.png" type="image/png">
+        <link rel="apple-touch-icon" href="/favicon.png">
+    
+        <title>Server Subscriptions - We Are Degenerates</title>
+        <link rel="stylesheet" href="/css/server.css">
+    
+        <meta name="description" content="Welcome Nsfw 18+ We are degenerates BDSM | nsfw stickers & emotes server Subscription page. Support the server by subscribing and claim perks.">
+        <meta name="theme-color" content="#720092">
+    
+        <meta property="og:image" content="https://wearedegenerates.org/images/logo.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:url" content="https://wearedegenerates.org/server/subscription">
+        <meta property="og:type" content="website">
+    
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    </head>
+
 <body>
+
+<!-- Age Gate Pop-Up -->
+<div id="ageGateModal" class="age-gate-modal">
+    <div class="age-gate-content">
+        <h2>Are you over 18 years old?</h2>
+        <p>You must be 18 or older to access this website.</p>
+        <div class="age-gate-buttons">
+            <button id="yesButton">Yes</button>
+            <a id="noButton" href="access-denied.html">No</a>
+        </div>
+    </div>
+</div>
 
     <div class="navigation-buttons">
         <a href="/server.html" class="nav-button">Back</a>
     </div>
     <main>
-        <section class="subscriptions">
+        <section class="server-rules">
             <h1>Support Our Community</h1>
-            <p>Support our community and enjoy exclusive benefits. As a subscriber, you'll get access to private channels, level perks, custom reactions, economy perks, and much more.</p>
+            <p><br><strong>Before subscribing, Make sure to connect your discord account to your <a href="https://ko-fi.com/Discord/Settings" target=_blank>Ko-fi account</a>.</strong><br><br>Support our community and enjoy exclusive benefits by subscribing to our server subscriptions. As a subscriber, you'll get access to private channels, level perks, custom reactions, economy perks, and much more dependingon which tier you're subscribed to.</p>
 
             <h2>Subscriptions</h2>
-            <p>Currently, only four types of subscriptions are available:</p>
+            <p>Currently, only three types of subscriptions are available:</p>
             <ul>
                 <li>Donators</li>
                 <li>Level and Economy</li>
                 <li>VIP</li>
                 <li>All-in-One + More</li>
             </ul>
-            <p>To see more details, select an option from the menu below.</p>
+            <p>To see more details, scroll below or <a href="#subs">click here</a>.</p>
 
             <h2>Updates</h2>
             <p>The prices will change depending on what we add or remove. We'll make an announcement in <a href="https://discord.com/channels/1222281807022657546/1325678576539799675" target="_blank">this channel</a> when we make changes.</p>
@@ -42,19 +68,36 @@
 
             <h2>Refund Policy</h2>
             <p>If you subscribed within the past three days, you are eligible for a refund. After that period, refunds will not be issued.</p>
+        </section>
 
-            <h2>Subscription Tiers</h2>
-            
-            <h3>Donator</h3>
-            <p>Subscribe to help us run the server and receive:</p>
+
+
+        <section class="vipplus">
+  
+            <h2 id="subs">Subscription Tiers</h2>
+
+            <h3>VIP Plus (Recommended)</h3>
+            <p>Get even more perks with VIP Plus:</p>
             <ul>
-                <li>Exclusive donator hoisted role</li>
-                <li>10% level XP boost</li>
                 <li>Access to color roles</li>
-                <li>400k spermies once a month</li>
+                <li>400k spermies once a month will be automatically added to your server bank</li>
+                <li>200k spermies will be automatically added to your server bank</li>
+                <li>1m spermies every 10 days will be automatically added to your server bank</li>
+                <li>50% XP boost</li>
                 <li>Eternal love from our team</li>
+                <li>Any type of link in bio (as long as it follows the law and Discord ToS)</li>
+                <li>2 trigger emoji reactions to your name/ping (resets if you leave the server)</li>
+                <li>Access to VIP category</li>
+                <li>Access to private VCs</li>
+                <li>4 VIP badges</li>
+                <li>Custom editable role (shareable with up to 4 members) and the roles from previous tiers such as VIP, Donators and level & economy role</li>
+                <li>Low cooldowns and access to exclusive commands</li>
+                <li>Early access to new updates</li>
+                <li>Access to fun commands</li>
             </ul>
-
+            </section>
+            
+            <section class="vip">
             <h3>VIP</h3>
             <p>Subscribe to get VIP perks and help us run the server:</p>
             <ul>
@@ -66,31 +109,46 @@
                 <li>Eternal love from our team</li>
                 <li>4 VIP badges</li>
                 <li>Any type of link in bio (as long as it follows the law and Discord ToS)</li>
-                <li>1m spermies every 10 days with *collect command</li>
+                <li>1m spermies every 10 days will be automatically added to your server bank</li>
                 <li>2 trigger emoji reactions to your name/ping (resets if you leave the server)</li>
             </ul>
+            </section>
 
-            <h3>VIP Plus</h3>
-            <p>Get even more perks with VIP Plus:</p>
+            <section class="donators">
+            <h3>Donator</h3>
+            <p>Subscribe to help us run the server and receive:</p>
             <ul>
+                <li>Exclusive donator hoisted role</li>
+                <li>10% level XP boost</li>
                 <li>Access to color roles</li>
-                <li>400k spermies once a month</li>
-                <li>200k spermies with *collect command every 2 days</li>
-                <li>1m spermies every 10 days with *collect command</li>
-                <li>50% XP boost</li>
+                <li>400k spermies once a month will be automatically added to your server bank</li>
                 <li>Eternal love from our team</li>
-                <li>Any type of link in bio (as long as it follows the law and Discord ToS)</li>
-                <li>2 trigger emoji reactions to your name/ping (resets if you leave the server)</li>
-                <li>Access to VIP category</li>
-                <li>Access to private VCs</li>
-                <li>4 VIP badges</li>
-                <li>Custom editable role (shareable with up to 4 members)</li>
-                <li>Low cooldowns and access to exclusive commands</li>
-                <li>Early access to new updates</li>
-                <li>Access to fun commands</li>
             </ul>
-        </section>
+<p><br>Recommended to subscribe from <a href="https://ko-fi.com" target="_blank">Ko-fi page</a>.<br>Make sure to create a ko-fi account before subscribing.</p>
+            </section>
     </main>
+    <footer>
+        <p>&copy; 2025 We Are Degenerates. All rights reserved.</p>
+     </footer>  
+
+ <script> 
+        const ageGateModal = document.getElementById('ageGateModal');
+        const yesButton = document.getElementById('yesButton');
+        
+        if (!sessionStorage.getItem('ageVerified')) {
+            document.addEventListener('DOMContentLoaded', function() {
+                ageGateModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
+            });
+        }
+    
+        // Handle "Yes" button click
+        yesButton.addEventListener('click', function() {
+            sessionStorage.setItem('ageVerified', 'true');
+            ageGateModal.style.display = 'none';
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+ </script>
 
     <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
     <script>

@@ -3,12 +3,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: radial-gradient(closest-side, #ff00f7, #b700ff, #8c00c3, #600085);
+    background: radial-gradient(closest-side, #d900ff, #540075, #8c00c3, #600085);
     color: white;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    animation: backgroundAnimation 10s infinite alternate;
 }
 
 
@@ -79,7 +78,7 @@ header {
 
     padding: 10px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
 }
 
 nav {
@@ -100,7 +99,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #6d007b;
+    background-color: rgb(45, 0, 96);
     transform: scale(1.1);
 }
 
@@ -143,7 +142,7 @@ nav a:hover {
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-size: 16px;
     white-space: nowrap;
-    opacity: 1; /* Ensure it's always visible */
+    opacity: 1; 
 }
 
 .cta-button:hover {
@@ -152,29 +151,30 @@ nav a:hover {
 }
 
 .cta-icon {
-    width: 24px; /* Set the width of the logo */
-    height: auto; /* Maintain aspect ratio */
-    flex-shrink: 0; /* Prevent the logo from shrinking */
-    opacity: 1; /* Ensure the icon is always visible */
+    width: 24px;
+    height: auto;
+    flex-shrink: 0;
+    opacity: 1;
 }
 
 
 /* About Sections */
 .about-owner {
     padding: 40px 20px;
-    background-color: #9600d6;
+    background: linear-gradient(0.25turn, #3e0053, #b000d3, #3e0053);
     text-align: center;
-    border: 3px solid #bb00ff;
-    border-radius: 20px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    max-width: 800px; 
-    margin: 20px auto; 
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; 
+    padding: 20px;
+    border-radius: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.505);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto 20px;
+    box-decoration-break: inherit;
 }
+
 
 .about-owner:hover {
     transform: scale(1.05); 
-    border-color: #ff00ff; 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
@@ -192,7 +192,20 @@ nav a:hover {
 
 .about-us {
     padding: 40px 20px;
+    background: linear-gradient(0.25turn, #3e0053, #b000d3, #3e0053);
     text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    width: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.393);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto 20px;
+    box-decoration-break: inherit;
+}
+
+.about-us:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 .about-us h2 {
@@ -212,7 +225,7 @@ nav a:hover {
 /* Features Section */
 .features, .testimonials, .events, .faq {
     padding: 40px 20px;
-    background: linear-gradient(0.25turn, #66008f, #d902ff, #4d0085);
+    background: linear-gradient(0.25turn, #3e0053, #b000d3, #3e0053);
     text-align: center;
 }
 
@@ -226,9 +239,8 @@ nav a:hover {
 }
 
 .feature-item, .testimonial-item, .event-item, .faq-item {
-    background-color: #6A0DAD;
+    background: revert-layer;
     padding: 20px;
-    border-radius: 20px;
     width: 250px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -245,7 +257,7 @@ nav a:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background: linear-gradient(0.25turn, #66008f, #d902ff, #4d0085);
+    background: linear-gradient(0.25turn, #3e0053, #b000d3, #3e0053);
     font-size: 14px;
     opacity: 0.9;
 }

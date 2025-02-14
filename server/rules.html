@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rules - We Are Degenerates</title>
-    <link rel="stylesheet" href="/css/server.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" href="/favicon.png" type="image/png">
+        <link rel="apple-touch-icon" href="/favicon.png">
+    
+        <title>Server rules - We Are Degenerates</title>
+        <link rel="stylesheet" href="/css/server.css">
+    
+        <meta name="description" content="Welcome Nsfw 18+ We are degenerates BDSM | nsfw stickers & emotes server rules page. Read our detailes rules here.">
+        <meta name="theme-color" content="#720092">
+    
+        <meta property="og:image" content="https://wearedegenerates.org/images/logo.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:url" content="https://wearedegenerates.org/server/rules">
+        <meta property="og:type" content="website">
+    
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    </head>
+
 <body>
+
+<!-- Age Gate Pop-Up -->
+<div id="ageGateModal" class="age-gate-modal">
+    <div class="age-gate-content">
+        <h2>Are you over 18 years old?</h2>
+        <p>You must be 18 or older to access this website.</p>
+        <div class="age-gate-buttons">
+            <button id="yesButton">Yes</button>
+            <a id="noButton" href="access-denied.html">No</a>
+        </div>
+    </div>
+</div>
+
+
     <div class="navigation-buttons">
         <a href="/server.html" class="nav-button">Back</a>
     </div>
     <main>
-        <section class="rules">
+        <section class="server-rules">
             <h1>Welcome to the We Are Degenerates NSFW 18+ Server</h1>
             <p>By reading these rules, you confirm that you are at least 18 years old and agree to abide by both these rules and Discord’s Terms of Service (ToS). Please treat everyone with kindness and respect.</p>
 
@@ -40,6 +70,7 @@
             <ul>
                 <li><strong>Personal Conflicts:</strong> Keep personal conflicts and disputes outside the server.</li>
                 <li><strong>Drama-Free Zone:</strong> Engaging in drama or bringing external conflicts into the server is not allowed and may result in disciplinary action.</li>
+                <li><strong>Focus on community:</strong> Engage with the community in a friendly and non-toxic manner.</li>
             </ul>
 
             <h3>4. Reporting Issues Properly</h3>
@@ -68,7 +99,43 @@
                 <li><strong>Consequences:</strong> Such behavior will result in immediate removal from the server.</li>
             </ul>
 
-            <h3>8. Re-Verification Policy</h3>
+            <h3>8. Respect for Staff Members</h3>
+            <ul>
+                <li><strong>Disrespecting Staff:</strong> Any form of disrespect towards staff members will not be tolerated and may result in removal from the server.<br>If a staff member requests that you stop a particular activity or discussion, comply immediately.</li>
+            </ul>
+
+            <h3>9. Respect User Roles and Pronouns</h3>
+            <ul>
+                <li><strong>Role Respect:</strong> Respect members’ roles and the roles assigned to them.</li>
+                <li><strong>Pronouns:</strong> Honor and use the pronouns that members have chosen for themselves.</li>
+                <li><strong>DM Restrictions:</strong> Sending NSFW content via direct messages is prohibited and will lead to an immediate ban.</li>
+                <li><strong>Don't use nsfw bots without consent:</strong> Please do not use nsfw bot commands on people without their consent. If you see someone using nsfw commands on you, please report them to staff by create a ticket <a href="https://discordapp.com/channels/1222281807022657546/1325586997880029258" target="_blank">here</a>.</li>
+            </ul>
+
+            <h3>10. Posting Personal Content</h3>
+            <ul>
+                <li><strong>Verification Required:</strong> You must complete the verification process before posting personal nudes. This helps ensure that all content shared is consensual and compliant with server rules.</li>
+                <li><strong>Compliance:</strong> Ensure that all content adheres to the server's guidelines and does not violate any rules.</li>
+            </ul>
+
+            <h3>11. Prohibited Behaviour</h3>
+            <ul>
+                <li><strong>Harassment is Prohibited:</strong> Any form of harassment will be addressed seriously and can result in removal from the server. Harassment includes making anyone feel uncomfortable, persistently bothering someone after being asked to stop, or any behaviour that undermines a respectful environment.</li>
+            </ul>
+
+            <h3>12. Alt accounts</h3>
+            <ul>
+                <li><strong>No alt accounts:</strong> Alt accounts are not allowed. If you see someone having an alt account in the server, please report them <a href="https://discordapp.com/channels/1222281807022657546/1325586997880029258" target="_blank">here</a>.<br>Staff may have alt account for testing purpose.</li>
+            </ul>
+
+            <h3>12. Self promotion</h3>
+            <ul>
+                <li><strong>Self promotion is not allowed:</strong> Self promotion is strictly prohibited. This includes promotion links in bio and or pronouns or status. If staff ask you to remove a promo link or text in bio or others, please do or it'll result in being kicked from the server.</li>
+                <li><strong>Users allowed to have links in bio:</strong> VIP and VIP plus may have link in bio as long as it does not break discord terms of services or guidelines.<br>Server trusted partners may have their partnered server link in bio.</li>
+            </ul>
+
+        
+            <h3>14. Re-Verification Policy</h3>
             <ul>
                 <li><strong>Leaving and Returning:</strong> If you leave the server and wish to return, you will need to go through the verification process again if you have been absent for more than 24 hours.</li>
                 <li><strong>Re-Verification Link:</strong> To re-verify, <a href="https://discord.com/channels/1222281807022657546/1325587193053446266" target="_blank">click here</a> and follow the provided instructions.</li>
@@ -77,5 +144,29 @@
             <p><strong>Breaking rules will result in a warning, kick, or ban depending on the staff team’s decision.</strong></p>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2025 We Are Degenerates. All rights reserved.</p>
+    </footer>
+
+    <script> 
+        const ageGateModal = document.getElementById('ageGateModal');
+        const yesButton = document.getElementById('yesButton');
+        
+        if (!sessionStorage.getItem('ageVerified')) {
+            document.addEventListener('DOMContentLoaded', function() {
+                ageGateModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
+            });
+        }
+    
+        // Handle "Yes" button click
+        yesButton.addEventListener('click', function() {
+            sessionStorage.setItem('ageVerified', 'true');
+            ageGateModal.style.display = 'none';
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+    </script>
+
 </body>
 </html>
