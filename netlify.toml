@@ -1,7 +1,4 @@
 
-[build]
-base = "/index"
-
 [[redirects]]
   from = "/*"
   to = "/index"
