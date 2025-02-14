@@ -222,6 +222,9 @@ a:hover {
     initial-value: 0deg;
 }
 
+.vipplus:hover {
+animation: vipplus none;
+}
 
 .vipplus a {
     color: #ffffff;
