@@ -1,14 +1,5 @@
-
 [[redirects]]
   from = "/*"
-  to = "/index"
-
-  [[redirects]]
-  from = "/"
-  to = "/index"
-
-  [[redirects]]
-  from = ""
   to = "/index"
 
   [[redirects]]
