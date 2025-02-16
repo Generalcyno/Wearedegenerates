@@ -1,4 +1,5 @@
 /* General Styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -170,6 +171,7 @@ nav a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 0 auto 20px;
     box-decoration-break: inherit;
+    cursor: pointer;
 }
 
 
@@ -188,6 +190,47 @@ nav a:hover {
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto 20px;
+}
+
+
+.co-owner-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.co-owner-item {
+    padding: 40px 20px;
+    background: linear-gradient(0.25turn, #3e0053, #b000d3, #3e0053);
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.505);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto 20px;
+    box-decoration-break: inherit;
+}
+
+.co-owner-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.co-owner-list p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.co-owner-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .about-us {
