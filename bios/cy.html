@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cy - We are degenerates</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            background: linear-gradient(0.25turn, #7e0000, #eb0000, #7e0000);
+            min-height: 100%;
+            font-size: 14px;
+            overflow: hidden;
+        }
+
+        /* Landing Animation */
+        @keyframes fadeInSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes flyIn {
+            0% {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes flyInFromTop {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            color: #fff;
+            width: 350px;
+            border-radius: 15px;
+            background: linear-gradient(#ff0000, #430000);
+            border: none;
+            padding: 10px;
+            position: relative;
+            margin-top: 20px;
+            overflow: hidden;
+            animation: fadeInSlideUp 1.5s ease-out;
+        }
+
+        .banner {
+            width: 100%;
+            height: 150px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            animation: flyInFromTop 1s ease-out forwards;
+        }
+
+        .profile-img {
+            position: relative;
+            margin-top: 85px;
+            display: flex;
+            justify-content: left;
+            animation: flyIn 1s ease-out forwards;
+        }
+
+        .profile-img img {
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+        }
+
+        .text-center {
+            margin-top: 5px;
+            text-align: left;
+            animation: flyIn 1s ease-out forwards;
+        }
+
+        .snap-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #000000;
+            background: #fffb00;
+            margin-top: 20px;
+            width: 50%;
+            animation: flyIn 1s ease-out forwards;
+        }
+
+        .snap-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        .insta-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #000000;
+            background: #ff9500;
+            margin-top: 10px;
+            width: 50%;
+            animation: flyIn 1s ease-out forwards;
+        }
+
+        .insta-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        .home_button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            background: linear-gradient(0.25turn, #470084, #a900a9, #470084);
+            margin-top: 30px;
+            animation: flyIn 1s ease-out forwards;
+        }
+
+        .bio {
+            margin-top: 10px;
+            word-wrap: break-word;
+            padding: 40px 20px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.605);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 0 auto 20px;
+            box-decoration-break: inherit;
+            cursor: pointer;
+            animation: flyIn 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="/images/users/cy-banner.gif" class="banner">
+        <div class="profile-img">
+            <img src="/images/users/cy.gif" width="100" class="rounded-circle">
+        </div>
+        <div class="text-center">
+            <h3 class="mt-2">Cy</h3>
+            <p>generayl_cy</p>
+            <p><small>He/him</small></p>
+    
+            <p class="bio">I am Cy.<br>I don't know what to type so Imma just<br>Brrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr<br>I don't know what to type so Imma just<br>make it long, like my pp.</p>
+            <button class="snap-button"><img src="/images/snapchat.png"> general_cy</button>
+            <button class="insta-button"><img src="/images/instagram.png"> general_cy</button>
+            <a href="/">
+                <button class="home_button">Home</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
