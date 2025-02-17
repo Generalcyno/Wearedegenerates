@@ -1,4 +1,8 @@
 [[redirects]]
+from = "/contact"
+to = "https://discord.com/invite/wadnsfw"
+
+[[redirects]]
   from = "/*"
   to = "/index"
 
