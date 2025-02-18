@@ -5,6 +5,7 @@ to = "https://discord.com/invite/wadnsfw"
   [[redirects]]
   from = "/appeal.html"
   to = "https://appeal.gg/wadnsfw"
+  force = true
 
 [[redirects]]
   from = "/*"
