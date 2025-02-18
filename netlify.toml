@@ -3,7 +3,7 @@ from = "/contact"
 to = "https://discord.com/invite/wadnsfw"
 
   [[redirects]]
-  from = "/appeal"
+  from = "/appeal.html"
   to = "https://appeal.gg/wadnsfw"
 
 [[redirects]]
