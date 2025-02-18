@@ -2,6 +2,10 @@
 from = "/contact"
 to = "https://discord.com/invite/wadnsfw"
 
+  [[redirects]]
+  from = "/appeal"
+  to = "https://appeal.gg/wadnsfw"
+
 [[redirects]]
   from = "/*"
   to = "/index"
@@ -9,9 +13,3 @@ to = "https://discord.com/invite/wadnsfw"
   [[redirects]]
   from = "/images"
   to = "/index"
-
-  [[redirects]]
-  from = "/appeal"
-  to = "https://appeal.gg/wadnsfw"
-  status = 301
-  force = true
