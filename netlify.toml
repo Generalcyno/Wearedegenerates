@@ -12,6 +12,6 @@ to = "https://discord.com/invite/wadnsfw"
 
   [[redirects]]
   from = "/appeal"
-  to = "https://appeal.gg/wadnsfw/"
+  to = "https://appeal.gg/wadnsfw"
   status = 301
   force = true
