@@ -13,3 +13,4 @@ to = "https://discord.com/invite/wadnsfw"
   [[redirects]]
   from = "/appeal"
   to = "https://appeal.gg/wadnsfw/"
+  force = true
