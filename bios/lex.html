@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cy - We are degenerates</title>
+    <title>Lex - We are degenerates</title>
+    <meta name="description" content="&quot;Wsp whores. I mean my favorite people&quot; - lex.\n&quot;I am doing hot girl shit. jk.&quot; - Lex\n&quot;I am being a nerd&quot; - Lex\n&quot;I speak in ingles remember?&quot; - Lex">
+    <meta name="theme-color" content="#041E42">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
@@ -22,7 +24,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            background: linear-gradient(0.25turn, #7e0000, #eb0000, #7e0000);
+            background: linear-gradient(0.25turn, #041E42, #B9D9EB, #002147);
             min-height: 100%;
             font-size: 14px;
             overflow: hidden;
@@ -62,17 +64,31 @@
             }
         }
 
+        /* Smooth Gradient Animation */
+        @keyframes smoothGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         .card {
             color: #fff;
             width: 350px;
             border-radius: 15px;
-            background: linear-gradient(#ff0000, #430000);
+            background: linear-gradient(45deg, #041E42, #002147, #B9D9EB, #041E42);
+            background-size: 200% 200%;
             border: none;
             padding: 10px;
             position: relative;
             margin-top: 20px;
             overflow: hidden;
-            animation: fadeInSlideUp 1.5s ease-out;
+            animation: fadeInSlideUp 1.5s ease-out, smoothGradient 5s ease infinite; 
         }
 
         .banner {
@@ -83,7 +99,9 @@
             left: 0;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
-            animation: flyInFromTop 1s ease-out forwards;
+            background: linear-gradient(45deg, #06005f, #0043a7, #0043a7, #080075);
+            background-size: 200% 200%;
+            animation: smoothGradient 5s ease infinite;
         }
 
         .profile-img {
@@ -92,6 +110,7 @@
             display: flex;
             justify-content: left;
             animation: flyIn 1s ease-out forwards;
+            z-index: 1;
         }
 
         .profile-img img {
@@ -116,7 +135,7 @@
             color: #000000;
             background: #fffb00;
             margin-top: 20px;
-            width: 50%;
+            width: 40%;
             animation: flyIn 1s ease-out forwards;
         }
 
@@ -137,7 +156,7 @@
             color: #000000;
             background: #ff9500;
             margin-top: 10px;
-            width: 50%;
+            width: 40%;
             animation: flyIn 1s ease-out forwards;
         }
 
@@ -158,11 +177,11 @@
             color: #fff;
             background: linear-gradient(0.25turn, #470084, #a900a9, #470084);
             margin-top: 30px;
-            animation: flyIn 1s ease-out forwards;
+            animation: flyIn 1s ease-out forwards, smoothGradient 5s ease infinite; 
         }
 
         a {
-    text-decoration: none;
+            text-decoration: none;
         }
 
         .bio {
@@ -176,24 +195,29 @@
             margin: 0 auto 20px;
             box-decoration-break: inherit;
             cursor: pointer;
-            animation: flyIn 1s ease-out forwards;
+            animation: flyIn 1s ease-out forwards; 
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <img src="/images/users/cy-banner.gif" class="banner">
+      <img src="/images/users/lex-banner.gif" class="banner">
         <div class="profile-img">
-            <img src="/images/users/cy.gif" width="100" class="rounded-circle">
+          <img src="/images/users/lex.jpg" style="width: 100px; height: 100px; object-fit: cover;" class="rounded-circle">
         </div>
         <div class="text-center">
-            <h3 class="mt-2">Cy</h3>
-            <p>general_cy</p>
-            <p><small>He/him</small></p>
+            <h3 class="mt-2">Lex</h3>
+            <p>urxfavxlex2525</p>
+            <p><small>Get / Fucked</small></p>
     
-            <p class="bio">I am Cy.<br>I don't know what to type so Imma just<br>Brrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr<br>I don't know what to type so Imma just<br>make it long, like my pp.</p>
-            <a href="https://google.com" target="_blank"><button class="snap-button"><img src="/images/snapchat.png"> general_cy</button></a>
-            <button class="insta-button"><img src="/images/instagram.png"> general_cy</button>
+            <p class="bio">“Wsp whores. I mean my favorite people” -lex<br>“I'm doing hot girl shit.<br>jk. I'm being a nerd” -Lex <br><br>“I speak in ingles remember?” -Lex</p>
+            <a href="https://snapchat.com/t/3xaAbys7" target="_blank">
+              <button class="snap-button"><img src="/images/snapchat.png"> lexiiii❤️</button>
+            </a>
+            <a href="https://www.instagram.com/urxfavxlex/profilecard/?igsh=MTd0MDJ6MWZ1cjl0Yw%3D%3D" target="_blank">
+            <button class="insta-button"><img src="/images/instagram.png"> urxfavxlex</button>
+            </a>
+
             <a href="/">
                 <button class="home_button">Home</button>
             </a>
