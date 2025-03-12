@@ -1,3 +1,5 @@
 User-agent: *
-Allow: /
+Disallow: /
+Allow: /$
+Allow: /index.html
 Sitemap: https://wearedegenerates.org/sitemap.xml

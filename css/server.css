@@ -123,7 +123,7 @@ a:hover {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: linear-gradient(0.25turn, #3e0053, #b000d3, #3e0053);
+    background: linear-gradient(0.25turn, #3e0053, #720088, #3e0053);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
